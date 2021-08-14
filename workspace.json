@@ -102,6 +102,27 @@
           }
         }
       }
+    },
+    "fossil-ui": {
+      "root": "libs/fossil-ui",
+      "sourceRoot": "libs/fossil-ui/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/fossil-ui/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/fossil-ui"],
+          "options": {
+            "jestConfig": "libs/fossil-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
