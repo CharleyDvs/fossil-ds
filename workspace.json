@@ -1,0 +1,127 @@
+{
+  "version": 2,
+  "projects": {
+    "fossil-ds": {
+      "root": "apps/fossil-ds",
+      "sourceRoot": "apps/fossil-ds/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/fossil-ds",
+            "index": "apps/fossil-ds/src/index.html",
+            "main": "apps/fossil-ds/src/main.tsx",
+            "polyfills": "apps/fossil-ds/src/polyfills.ts",
+            "tsConfig": "apps/fossil-ds/tsconfig.app.json",
+            "assets": [
+              "apps/fossil-ds/src/favicon.ico",
+              "apps/fossil-ds/src/assets"
+            ],
+            "styles": ["apps/fossil-ds/src/styles.scss"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/fossil-ds/src/environments/environment.ts",
+                  "with": "apps/fossil-ds/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "fossil-ds:build",
+            "hmr": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "fossil-ds:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/fossil-ds/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/fossil-ds"],
+          "options": {
+            "jestConfig": "apps/fossil-ds/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "fossil-ds-e2e": {
+      "root": "apps/fossil-ds-e2e",
+      "sourceRoot": "apps/fossil-ds-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/fossil-ds-e2e/cypress.json",
+            "tsConfig": "apps/fossil-ds-e2e/tsconfig.e2e.json",
+            "devServerTarget": "fossil-ds:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "fossil-ds:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/fossil-ds-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "fossil-ds"
+}
