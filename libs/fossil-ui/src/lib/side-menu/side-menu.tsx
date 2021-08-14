@@ -24,6 +24,7 @@ import {
   HiCog,
   HiColorSwatch,
 } from 'react-icons/hi';
+import { useHistory } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -103,14 +104,18 @@ export const SideMenu = ({
 }: SideMenuProps): JSX.Element => {
   const classes = useStyles();
   const theme = useTheme();
+  const history = useHistory();
+
   const [open, setOpen] = React.useState<boolean>(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
   };
-
   const handleDrawerClose = () => {
     setOpen(false);
+  };
+  const handleItemClick = (url: string) => {
+    history.push(`/${url}`);
   };
 
   return (
@@ -156,19 +161,19 @@ export const SideMenu = ({
         </div>
         <Divider />
         <List>
-          <ListItem button>
+          <ListItem button onClick={() => handleItemClick('')}>
             <ListItemIcon>
               <HiHome />
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItem>
-          <ListItem button>
+          <ListItem button onClick={() => handleItemClick('components')}>
             <ListItemIcon>
               <HiCog />
             </ListItemIcon>
             <ListItemText primary="Components" />
           </ListItem>
-          <ListItem button>
+          <ListItem button onClick={() => handleItemClick('colors')}>
             <ListItemIcon>
               <HiColorSwatch />
             </ListItemIcon>
