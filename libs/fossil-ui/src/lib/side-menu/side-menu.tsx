@@ -24,14 +24,16 @@ import {
   HiCog,
   HiColorSwatch,
 } from 'react-icons/hi';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 const drawerWidth = 240;
 
 export interface SideMenuProps {
   children?: React.ReactNode;
-  headerTitle?: string;
-  headerSub?: string;
+}
+
+interface SideMenuParams {
+  page: string;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -97,14 +99,11 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export const SideMenu = ({
-  children,
-  headerTitle,
-  headerSub,
-}: SideMenuProps): JSX.Element => {
+export const SideMenu = ({ children }: SideMenuProps): JSX.Element => {
   const classes = useStyles();
   const theme = useTheme();
   const history = useHistory();
+  const { page } = useParams<SideMenuParams>();
 
   const [open, setOpen] = React.useState<boolean>(false);
 
@@ -137,8 +136,8 @@ export const SideMenu = ({
           >
             <HiMenu />
           </IconButton>
-          <h1 className={classes.title}>{headerTitle}</h1>
-          <p>{headerSub}</p>
+          <h1 className={classes.title}>Fossil DS</h1>
+          <p className={classes.title}>{page}</p>
         </Toolbar>
       </AppBar>
       <Drawer
