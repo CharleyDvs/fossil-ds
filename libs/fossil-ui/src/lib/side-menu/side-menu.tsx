@@ -29,13 +29,18 @@ const drawerWidth = 240;
 
 export interface SideMenuProps {
   children?: React.ReactNode;
-  header?: React.ReactNode;
+  headerTitle?: string;
+  headerSub?: string;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: 'flex',
+    },
+    title: {
+      paddingRight: theme.spacing(2),
+      textTransform: 'capitalize',
     },
     appBar: {
       transition: theme.transitions.create(['margin', 'width'], {
@@ -91,7 +96,11 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export const SideMenu = ({ children, header }: SideMenuProps): JSX.Element => {
+export const SideMenu = ({
+  children,
+  headerTitle,
+  headerSub,
+}: SideMenuProps): JSX.Element => {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState<boolean>(false);
@@ -123,7 +132,8 @@ export const SideMenu = ({ children, header }: SideMenuProps): JSX.Element => {
           >
             <HiMenu />
           </IconButton>
-          {header}
+          <h1 className={classes.title}>{headerTitle}</h1>
+          <p>{headerSub}</p>
         </Toolbar>
       </AppBar>
       <Drawer
