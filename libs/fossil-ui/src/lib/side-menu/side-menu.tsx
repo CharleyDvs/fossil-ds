@@ -11,18 +11,25 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import { BiChevronLeft, BiChevronRight, BiBone } from 'react-icons/bi';
+import {
+  HiChevronDoubleLeft,
+  HiChevronDoubleRight,
+  HiHome,
+  HiMenu,
+  HiCog,
+  HiColorSwatch,
+} from 'react-icons/hi';
 
 const drawerWidth = 240;
 
 export interface SideMenuProps {
   children?: React.ReactNode;
+  header?: React.ReactNode;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -84,7 +91,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export const SideMenu = ({ children }: SideMenuProps): JSX.Element => {
+export const SideMenu = ({ children, header }: SideMenuProps): JSX.Element => {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState<boolean>(false);
@@ -113,10 +120,10 @@ export const SideMenu = ({ children }: SideMenuProps): JSX.Element => {
             onClick={handleDrawerOpen}
             edge="start"
             className={clsx(classes.menuButton, open && classes.hide)}
-          ></IconButton>
-          <Typography variant="h6" noWrap>
-            Persistent drawer
-          </Typography>
+          >
+            <HiMenu />
+          </IconButton>
+          {header}
         </Toolbar>
       </AppBar>
       <Drawer
@@ -130,19 +137,33 @@ export const SideMenu = ({ children }: SideMenuProps): JSX.Element => {
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <BiChevronLeft /> : <BiChevronRight />}
+            {theme.direction === 'ltr' ? (
+              <HiChevronDoubleLeft />
+            ) : (
+              <HiChevronDoubleRight />
+            )}
           </IconButton>
         </div>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                <BiBone />
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button>
+            <ListItemIcon>
+              <HiHome />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <HiCog />
+            </ListItemIcon>
+            <ListItemText primary="Components" />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <HiColorSwatch />
+            </ListItemIcon>
+            <ListItemText primary="Colors" />
+          </ListItem>
         </List>
       </Drawer>
       <main
