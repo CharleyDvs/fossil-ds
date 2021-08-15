@@ -17,7 +17,7 @@ import {
   HiChevronDoubleRight,
   HiMenu,
 } from 'react-icons/hi';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -99,9 +99,8 @@ export const SideMenu = ({
 }: SideMenuProps): JSX.Element => {
   const classes = useStyles();
   const theme = useTheme();
-  const location = useLocation();
-
-  console.log(location);
+  const { pathname } = useLocation();
+  const locationArray = pathname.split('/').filter((string) => string !== '');
 
   const [open, setOpen] = React.useState<boolean>(false);
 
@@ -132,7 +131,9 @@ export const SideMenu = ({
             <HiMenu />
           </IconButton>
           <h1 className={classes.title}>Fossil DS</h1>
-          <p className={classes.title}>page</p>
+          <p className={classes.title}>{`${
+            locationArray[0] ? locationArray[0] : 'home'
+          }`}</p>
         </Toolbar>
       </AppBar>
       <Drawer
