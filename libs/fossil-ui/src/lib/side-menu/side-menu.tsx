@@ -10,26 +10,20 @@ import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import {
   HiChevronDoubleLeft,
   HiChevronDoubleRight,
-  HiHome,
   HiMenu,
-  HiCog,
-  HiColorSwatch,
 } from 'react-icons/hi';
 import { useHistory, useParams } from 'react-router-dom';
 
 const drawerWidth = 240;
 
 export interface SideMenuProps {
-  children?: React.ReactNode;
+  children?: React.ReactChild;
+  menuList?: React.ReactNode;
 }
 
 interface SideMenuParams {
@@ -99,7 +93,10 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export const SideMenu = ({ children }: SideMenuProps): JSX.Element => {
+export const SideMenu = ({
+  children,
+  menuList,
+}: SideMenuProps): JSX.Element => {
   const classes = useStyles();
   const theme = useTheme();
   const history = useHistory();
@@ -159,33 +156,14 @@ export const SideMenu = ({ children }: SideMenuProps): JSX.Element => {
           </IconButton>
         </div>
         <Divider />
-        <List>
-          <ListItem button onClick={() => handleItemClick('')}>
-            <ListItemIcon>
-              <HiHome />
-            </ListItemIcon>
-            <ListItemText primary="Home" />
-          </ListItem>
-          <ListItem button onClick={() => handleItemClick('components')}>
-            <ListItemIcon>
-              <HiCog />
-            </ListItemIcon>
-            <ListItemText primary="Components" />
-          </ListItem>
-          <ListItem button onClick={() => handleItemClick('colors')}>
-            <ListItemIcon>
-              <HiColorSwatch />
-            </ListItemIcon>
-            <ListItemText primary="Colors" />
-          </ListItem>
-        </List>
+        {menuList}
       </Drawer>
       <main
         className={clsx(classes.content, {
           [classes.contentShift]: open,
         })}
       >
-        {children}
+        {/* {children} */}
       </main>
     </div>
   );
