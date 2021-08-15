@@ -1,20 +1,15 @@
 import styles from './app.module.scss';
 import { SideMenu, CustomList, CollapseListOption } from '@fossil-ds/fossil-ui';
-import { Switch, Route, useHistory } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { HiHome, HiCog } from 'react-icons/hi';
 
 const Home = () => <h1>Hello World</h1>;
 
 const Menulist = () => {
-  const history = useHistory();
-
   const menuItems: CollapseListOption[] = [
     {
       icon: <HiHome />,
       text: 'Home',
-      clickHandler: () => {
-        history.push('home');
-      },
     },
     {
       icon: <HiCog />,
@@ -24,9 +19,7 @@ const Menulist = () => {
         {
           icon: HiHome,
           text: 'Button',
-          clickHandler: () => {
-            history.push('button');
-          },
+          url: 'components/button',
         },
       ],
     },
@@ -38,12 +31,13 @@ const Menulist = () => {
 export function App() {
   return (
     <div className={styles.app}>
+      <SideMenu menuList={<Menulist />} />
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/:page">
-          <SideMenu menuList={<Menulist />} />
+        <Route path="/component/:componentId">
+          <h1>Component</h1>
         </Route>
       </Switch>
     </div>
