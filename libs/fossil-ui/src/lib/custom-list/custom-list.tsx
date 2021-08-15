@@ -9,7 +9,6 @@ import { HiChevronUp, HiChevronDown } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 
 export interface ListOption {
-  index?: number;
   icon?: React.ReactNode;
   text?: string;
   url?: string;
@@ -44,8 +43,8 @@ const useStyles = makeStyles((theme: Theme) =>
 export const CustomList = ({ listItems }: CustomListProps): JSX.Element => {
   const classes = useStyles();
 
-  const ListOption = ({ url = '', icon, index, text }: ListOption) => (
-    <Link key={`${text}-${index}`} to={url} className={classes.link}>
+  const ListOption = ({ url = '', icon, text }: ListOption) => (
+    <Link to={url} className={classes.link}>
       <ListItem button>
         <ListItemIcon>{icon}</ListItemIcon>
         <ListItemText primary={text} />
@@ -64,7 +63,7 @@ export const CustomList = ({ listItems }: CustomListProps): JSX.Element => {
     };
 
     return (
-      <div>
+      <>
         <ListItem button onClick={handleClick}>
           <ListItemIcon>{icon}</ListItemIcon>
           <ListItemText primary={text} />
@@ -73,11 +72,11 @@ export const CustomList = ({ listItems }: CustomListProps): JSX.Element => {
         <Collapse in={open} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
             {collapseListItems?.map((props: ListOption, index: number) => (
-              <ListOption index={index} {...props} />
+              <ListOption key={`${props.text}-${index}`} {...props} />
             ))}
           </List>
         </Collapse>
-      </div>
+      </>
     );
   };
 
@@ -85,9 +84,9 @@ export const CustomList = ({ listItems }: CustomListProps): JSX.Element => {
     <List>
       {listItems.map(({ isCollapse, ...props }, index: number) =>
         isCollapse ? (
-          <CollapsableList index={index} {...props} />
+          <CollapsableList key={`${props.text}-${index}`} {...props} />
         ) : (
-          <ListOption index={index} {...props} />
+          <ListOption key={`${props.text}-${index}`} {...props} />
         )
       )}
     </List>

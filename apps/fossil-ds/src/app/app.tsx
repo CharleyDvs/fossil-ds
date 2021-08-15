@@ -17,7 +17,6 @@ const Menulist = () => {
       text: 'Components',
       collapseListItems: [
         {
-          icon: HiHome,
           text: 'Button',
           url: 'components/button',
         },
