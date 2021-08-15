@@ -1,7 +1,7 @@
 import styles from './app.module.scss';
 import { SideMenu, CustomList, CollapseListOption } from '@fossil-ds/fossil-ui';
 import { Switch, Route } from 'react-router-dom';
-import { HiHome, HiCog } from 'react-icons/hi';
+import { HiHome, HiCog, HiColorSwatch } from 'react-icons/hi';
 
 const Home = () => <h1>Hello World</h1>;
 
@@ -18,9 +18,14 @@ const Menulist = () => {
       collapseListItems: [
         {
           text: 'Button',
-          url: 'components/button',
+          url: '/components/button',
         },
       ],
+    },
+    {
+      icon: <HiColorSwatch />,
+      text: 'Colors',
+      url: '/colors',
     },
   ];
 

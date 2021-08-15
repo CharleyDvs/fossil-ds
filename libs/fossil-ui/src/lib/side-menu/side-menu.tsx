@@ -26,10 +26,6 @@ export interface SideMenuProps {
   menuList?: React.ReactNode;
 }
 
-interface SideMenuParams {
-  page: string;
-}
-
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
