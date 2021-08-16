@@ -6,12 +6,11 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import { HiChevronUp, HiChevronDown } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
 
 export interface ListOption {
   icon?: React.ReactNode;
   text?: string;
-  url?: string;
+  clickHandler?: () => void;
 }
 
 export interface CollapseListOption extends ListOption {
@@ -43,13 +42,16 @@ const useStyles = makeStyles((theme: Theme) =>
 export const CustomList = ({ listItems }: CustomListProps): JSX.Element => {
   const classes = useStyles();
 
-  const ListOption = ({ url = '', icon, text }: ListOption) => (
-    <Link to={url} className={classes.link}>
-      <ListItem button>
-        <ListItemIcon>{icon}</ListItemIcon>
-        <ListItemText primary={text} />
-      </ListItem>
-    </Link>
+  const ListOption = ({ clickHandler, icon, text }: ListOption) => (
+    <ListItem
+      button
+      onClick={() => {
+        if (clickHandler) clickHandler();
+      }}
+    >
+      <ListItemIcon>{icon}</ListItemIcon>
+      <ListItemText primary={text} />
+    </ListItem>
   );
   const CollapsableList = ({
     icon,
