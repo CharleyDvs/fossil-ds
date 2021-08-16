@@ -3,7 +3,7 @@
   "platforms": {
     "scss": {
       "transformGroup": "scss",
-      "buildPath": "apps/fossil-ds/src/scss/",
+      "buildPath": "libs/shared/styles/src/",
       "files": [
         {
           "destination": "_variables.scss",

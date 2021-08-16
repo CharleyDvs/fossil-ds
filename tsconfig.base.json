@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@fossil-ds/fossil-ui": ["libs/fossil-ui/src/index.ts"]
+      "@fossil-ds/fossil-ui": ["libs/fossil-ui/src/index.ts"],
+      "@fossil-ds/shared/styles": ["libs/shared/styles/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -37,6 +37,9 @@
     },
     "fossil-ui": {
       "tags": []
+    },
+    "shared-styles": {
+      "tags": []
     }
   }
 }

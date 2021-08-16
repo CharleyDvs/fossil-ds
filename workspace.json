@@ -20,6 +20,9 @@
               "apps/fossil-ds/src/assets"
             ],
             "styles": ["apps/fossil-ds/src/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared/styles/src"]
+            },
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -119,6 +122,30 @@
           "outputs": ["coverage/libs/fossil-ui"],
           "options": {
             "jestConfig": "libs/fossil-ui/jest.config.js",
+            "passWithNoTests": true,
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared/styles/src"]
+            }
+          }
+        }
+      }
+    },
+    "shared-styles": {
+      "root": "libs/shared/styles",
+      "sourceRoot": "libs/shared/styles/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/styles/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/styles"],
+          "options": {
+            "jestConfig": "libs/shared/styles/jest.config.js",
             "passWithNoTests": true
           }
         }
