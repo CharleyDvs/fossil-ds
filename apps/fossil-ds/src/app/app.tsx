@@ -1,47 +1,22 @@
 import styles from './app.module.scss';
-import { SideMenu, CustomList, CollapseListOption } from '@fossil-ds/fossil-ui';
 import { Switch, Route } from 'react-router-dom';
-import { HiHome, HiCog, HiColorSwatch } from 'react-icons/hi';
+import { SideMenu } from '../layout/side-menu';
 
 const Home = () => <h1>Hello World</h1>;
-
-const Menulist = () => {
-  const menuItems: CollapseListOption[] = [
-    {
-      icon: <HiHome />,
-      text: 'Home',
-    },
-    {
-      icon: <HiCog />,
-      isCollapse: true,
-      text: 'Components',
-      collapseListItems: [
-        {
-          text: 'Button',
-          url: '/components/button',
-        },
-      ],
-    },
-    {
-      icon: <HiColorSwatch />,
-      text: 'Colors',
-      url: '/colors',
-    },
-  ];
-
-  return <CustomList listItems={menuItems} />;
-};
 
 export function App() {
   return (
     <div className={styles.app}>
-      <SideMenu menuList={<Menulist />} />
+      <SideMenu />
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/component/:componentId">
+        <Route path="/components/:componentName">
           <h1>Component</h1>
+        </Route>
+        <Route exact path="/colors">
+          <h1>Colors</h1>
         </Route>
       </Switch>
     </div>
