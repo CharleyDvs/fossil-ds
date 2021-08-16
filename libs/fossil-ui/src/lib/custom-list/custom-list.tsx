@@ -40,8 +40,6 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export const CustomList = ({ listItems }: CustomListProps): JSX.Element => {
-  const classes = useStyles();
-
   const ListOption = ({ clickHandler, icon, text }: ListOption) => (
     <ListItem
       button
