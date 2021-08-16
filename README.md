@@ -1,94 +1,181 @@
+# Basic Style Dictionary
+
+This example code is bare-bones to show you what this framework can do. If you have the style-dictionary module installed globally, you can `cd` into this directory and run:
+```bash
+style-dictionary build
+```
+
+You should see something like this output:
+```
+Copying starter files...
+
+Source style dictionary starter files created!
+
+Running `style-dictionary build` for the first time to generate build artifacts.
 
 
-# FossilDs
+scss
+✔︎  build/scss/_variables.scss
 
-This project was generated using [Nx](https://nx.dev).
+android
+✔︎  build/android/font_dimens.xml
+✔︎  build/android/colors.xml
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+compose
+✔︎ build/compose/StyleDictionaryColor.kt
+✔︎ build/compose/StyleDictionarySize.kt
 
-🔎 **Smart, Extensible Build Framework**
+ios
+✔︎  build/ios/StyleDictionaryColor.h
+✔︎  build/ios/StyleDictionaryColor.m
+✔︎  build/ios/StyleDictionarySize.h
+✔︎  build/ios/StyleDictionarySize.m
 
-## Adding capabilities to your workspace
+ios-swift
+✔︎  build/ios-swift/StyleDictionary.swift
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+ios-swift-separate-enums
+✔︎  build/ios-swift/StyleDictionaryColor.swift
+✔︎  build/ios-swift/StyleDictionarySize.swift
+```
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+Good for you! You have now built your first style dictionary! Moving on, take a look at what we have built. This should have created a build directory and it should look like this:
+```
+├── README.md
+├── config.json
+├── tokens/
+│   ├── color/
+│       ├── base.json
+│       ├── font.json
+│   ├── size/
+│       ├── font.json
+├── build/
+│   ├── android/
+│      ├── font_dimens.xml
+│      ├── colors.xml
+│   ├── compose/
+│      ├── StyleDictionaryColor.kt
+│      ├── StyleDictionarySize.kt
+│   ├── scss/
+│      ├── _variables.scss
+│   ├── ios/
+│      ├── StyleDictionaryColor.h
+│      ├── StyleDictionaryColor.m
+│      ├── StyleDictionarySize.h
+│      ├── StyleDictionarySize.m
+│   ├── ios-swift/
+│      ├── StyleDictionary.swift
+│      ├── StyleDictionaryColor.swift
+│      ├── StyleDictionarySize.swift
+```
 
-Below are our core plugins:
+If you open `config.json` you will see there are 5 platforms defined: scss, android, compose, ios, and ios-swift. Each platform has a transformGroup, buildPath, and files. The buildPath and files of the platform should match up to the files what were built. The files built should look like these:
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+**Android**
+```xml
+<!-- font_dimens.xml -->
+<resources>
+  <dimen name="size_font_small">12.00sp</dimen>
+  <dimen name="size_font_medium">16.00sp</dimen>
+  <dimen name="size_font_large">32.00sp</dimen>
+  <dimen name="size_font_base">16.00sp</dimen>
+</resources>
 
-There are also many [community plugins](https://nx.dev/community) you could add.
+<!-- colors.xml -->
+<resources>
+  <color name="color_base_gray_light">#ffcccccc</color>
+  <color name="color_base_gray_medium">#ff999999</color>
+  <color name="color_base_gray_dark">#ff111111</color>
+  <color name="color_base_red">#ffff0000</color>
+  <color name="color_base_green">#ff00ff00</color>
+  <color name="color_font_base">#ffff0000</color>
+  <color name="color_font_secondary">#ff00ff00</color>
+  <color name="color_font_tertiary">#ffcccccc</color>
+</resources>
+```
 
-## Generate an application
+**Compose**
+```kotlin
+object StyleDictionaryColor {
+  val colorBaseGrayDark = Color(0xff111111)
+  val colorBaseGrayLight = Color(0xffcccccc)
+  val colorBaseGrayMedium = Color(0xff999999)
+  val colorBaseGreen = Color(0xff00ff00)
+  val colorBaseRed = Color(0xffff0000)
+  val colorFontBase = Color(0xffff0000)
+  val colorFontSecondary = Color(0xff00ff00)
+  val colorFontTertiary = Color(0xffcccccc)
+}
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+object StyleDictionarySize {
+  /** the base size of the font */
+  val sizeFontBase = 16.00.sp
+  /** the large size of the font */
+  val sizeFontLarge = 32.00.sp
+  /** the medium size of the font */
+  val sizeFontMedium = 16.00.sp
+  /** the small size of the font */
+  val sizeFontSmall = 12.00.sp
+}
+```
 
-> You can use any of the plugins above to generate applications as well.
+**SCSS**
+```scss
+// variables.scss
+$color-base-gray-light: #cccccc;
+$color-base-gray-medium: #999999;
+$color-base-gray-dark: #111111;
+$color-base-red: #ff0000;
+$color-base-green: #00ff00;
+$color-font-base: #ff0000;
+$color-font-secondary: #00ff00;
+$color-font-tertiary: #cccccc;
+$size-font-small: 0.75rem;
+$size-font-medium: 1rem;
+$size-font-large: 2rem;
+$size-font-base: 1rem;
+```
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+**iOS**
+```objc
+#import "StyleDictionaryColor.h"
 
-## Generate a library
+@implementation StyleDictionaryColor
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
++ (UIColor *)color:(StyleDictionaryColorName)colorEnum{
+  return [[self values] objectAtIndex:colorEnum];
+}
 
-> You can also use any of the plugins above to generate libraries as well.
++ (NSArray *)values {
+  static NSArray* colorArray;
+  static dispatch_once_t onceToken;
 
-Libraries are shareable across libraries and applications. They can be imported from `@fossil-ds/mylib`.
+  dispatch_once(&onceToken, ^{
+    colorArray = @[
+[UIColor colorWithRed:0.800f green:0.800f blue:0.800f alpha:1.000f],
+[UIColor colorWithRed:0.600f green:0.600f blue:0.600f alpha:1.000f],
+[UIColor colorWithRed:0.067f green:0.067f blue:0.067f alpha:1.000f],
+[UIColor colorWithRed:1.000f green:0.000f blue:0.000f alpha:1.000f],
+[UIColor colorWithRed:0.000f green:1.000f blue:0.000f alpha:1.000f],
+[UIColor colorWithRed:1.000f green:0.000f blue:0.000f alpha:1.000f],
+[UIColor colorWithRed:0.000f green:1.000f blue:0.000f alpha:1.000f],
+[UIColor colorWithRed:0.800f green:0.800f blue:0.800f alpha:1.000f]
+    ];
+  });
 
-## Development server
+  return colorArray;
+}
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+@end
+```
 
-## Code scaffolding
+Pretty nifty! This shows a few things happening:
+1. The build system does a deep merge of all the token JSON files defined in the `source` attribute of `config.json`. This allows you to split up the token JSON files however you want. There are 2 JSON files with `color` as the top level key, but they get merged properly.
+1. The build system resolves references to other design tokens. `{size.font.medium.value}` gets resolved properly.
+1. The build system handles references to token values in other files as well as you can see in `tokens/color/font.json`.
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+Now let's make a change and see how that affects things. Open up `tokens/color/base.json` and change `"#111111"` to `"#000000"`. After you make that change, save the file and re-run the build command `style-dictionary build`. Open up the build files and take a look.
 
-## Build
+**Huzzah!**
 
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-
-
-## ☁ Nx Cloud
-
-### Distributed Computation Caching & Distributed Task Execution
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+Now go forth and create! Take a look at all the built-in [transforms](https://amzn.github.io/style-dictionary/#/transforms?id=pre-defined-transforms) and [formats](https://amzn.github.io/style-dictionary/#/formats?id=pre-defined-formats).
