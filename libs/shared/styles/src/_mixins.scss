@@ -1,0 +1,7 @@
+@import 'spacing';
+
+@each $space in $spaces {
+  .m-#{$space} {
+    margin: #{$space}px;
+  }
+}
