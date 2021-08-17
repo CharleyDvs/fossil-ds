@@ -2,19 +2,19 @@ import {
   SideMenu as FossilSideMenu,
   CustomList,
   CollapseListOption,
-} from '@fossil-ds/fossil-ui';
-import { HiHome, HiCog, HiColorSwatch } from 'react-icons/hi';
-import { useHistory } from 'react-router-dom';
+} from '@fossil-ds/fossil-ui'
+import { HiHome, HiCog, HiColorSwatch } from 'react-icons/hi'
+import { useHistory } from 'react-router-dom'
 
 const Menulist = () => {
-  const { push } = useHistory();
+  const { push } = useHistory()
 
   const menuItems: CollapseListOption[] = [
     {
       icon: <HiHome />,
       text: 'Home',
       clickHandler: () => {
-        push('/');
+        push('/')
       },
     },
     {
@@ -25,7 +25,7 @@ const Menulist = () => {
         {
           text: 'Button',
           clickHandler: () => {
-            push('/components/button');
+            push('/components/button')
           },
         },
       ],
@@ -34,12 +34,12 @@ const Menulist = () => {
       icon: <HiColorSwatch />,
       text: 'Colors',
       clickHandler: () => {
-        push('/colors');
+        push('/colors')
       },
     },
-  ];
+  ]
 
-  return <CustomList listItems={menuItems} />;
-};
+  return <CustomList listItems={menuItems} />
+}
 
-export const SideMenu = () => <FossilSideMenu menuList={<Menulist />} />;
+export const SideMenu = () => <FossilSideMenu menuList={<Menulist />} />

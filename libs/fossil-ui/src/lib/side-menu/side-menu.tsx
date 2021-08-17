@@ -1,29 +1,29 @@
-import React from 'react';
-import clsx from 'clsx';
+import React from 'react'
+import clsx from 'clsx'
 import {
   makeStyles,
   useTheme,
   Theme,
   createStyles,
-} from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
+} from '@material-ui/core/styles'
+import Drawer from '@material-ui/core/Drawer'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Divider from '@material-ui/core/Divider'
+import IconButton from '@material-ui/core/IconButton'
 import {
   HiChevronDoubleLeft,
   HiChevronDoubleRight,
   HiMenu,
-} from 'react-icons/hi';
-import { useLocation } from 'react-router-dom';
+} from 'react-icons/hi'
+import { useLocation } from 'react-router-dom'
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
 export interface SideMenuProps {
-  children?: React.ReactChild;
-  menuList?: React.ReactNode;
+  children?: React.ReactChild
+  menuList?: React.ReactNode
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -86,26 +86,26 @@ const useStyles = makeStyles((theme: Theme) =>
       }),
       marginLeft: 0,
     },
-  })
-);
+  }),
+)
 
 export const SideMenu = ({
   children,
   menuList,
 }: SideMenuProps): JSX.Element => {
-  const classes = useStyles();
-  const theme = useTheme();
-  const { pathname } = useLocation();
-  const locationArray = pathname.split('/').filter((string) => string !== '');
+  const classes = useStyles()
+  const theme = useTheme()
+  const { pathname } = useLocation()
+  const locationArray = pathname.split('/').filter((string) => string !== '')
 
-  const [open, setOpen] = React.useState<boolean>(false);
+  const [open, setOpen] = React.useState<boolean>(false)
 
   const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
   const handleDrawerClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <div className={classes.root}>
@@ -161,5 +161,5 @@ export const SideMenu = ({
         {/* {children} */}
       </main>
     </div>
-  );
-};
+  )
+}

@@ -16,7 +16,7 @@ export function App() {
           <h1>Component</h1>
         </Route>
         <Route exact path="/colors">
-          <h1>Colors test</h1>
+          <h1>Color</h1>
         </Route>
       </Switch>
     </div>
