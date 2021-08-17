@@ -1,8 +1,8 @@
-import styles from './app.module.scss';
-import { Switch, Route } from 'react-router-dom';
-import { SideMenu } from '../layout/side-menu';
+import styles from './app.module.scss'
+import { Switch, Route } from 'react-router-dom'
+import { SideMenu } from '../layout/side-menu'
 
-const Home = () => <h1>Hello World</h1>;
+const Home = () => <h1>Hello World</h1>
 
 export function App() {
   return (
@@ -16,11 +16,11 @@ export function App() {
           <h1>Component</h1>
         </Route>
         <Route exact path="/colors">
-          <h1>Colors</h1>
+          <h1>Colors test</h1>
         </Route>
       </Switch>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
