@@ -1,6 +1,29 @@
 {
   "version": 2,
   "projects": {
+    "fossil-documentation": {
+      "root": "libs/fossil-documentation",
+      "sourceRoot": "libs/fossil-documentation/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/fossil-documentation/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/fossil-documentation"],
+          "options": {
+            "jestConfig": "libs/fossil-documentation/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "fossil-ds": {
       "root": "apps/fossil-ds",
       "sourceRoot": "apps/fossil-ds/src",

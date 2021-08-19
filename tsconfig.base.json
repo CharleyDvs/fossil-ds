@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@fossil-ds/fossil-documentation": [
+        "libs/fossil-documentation/src/index.ts"
+      ],
       "@fossil-ds/fossil-layout": ["libs/fossil-layout/src/index.ts"],
       "@fossil-ds/fossil-ui": ["libs/fossil-ui/src/index.ts"],
       "@fossil-ds/shared/styles": ["libs/shared/styles/src/index.ts"]

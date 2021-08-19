@@ -28,6 +28,9 @@
     ]
   },
   "projects": {
+    "fossil-documentation": {
+      "tags": []
+    },
     "fossil-ds": {
       "tags": []
     },
