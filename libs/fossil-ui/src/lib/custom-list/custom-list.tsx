@@ -23,22 +23,6 @@ export interface CustomListProps {
   listItems: CollapseListOption[]
 }
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      width: '100%',
-      backgroundColor: theme.palette.background.paper,
-    },
-    nested: {
-      paddingLeft: theme.spacing(4),
-    },
-    link: {
-      textDecoration: 'none',
-      color: 'inherit',
-    },
-  }),
-)
-
 export const CustomList = ({ listItems }: CustomListProps): JSX.Element => {
   const ListOption = ({ clickHandler, icon, text }: ListOption) => (
     <ListItem

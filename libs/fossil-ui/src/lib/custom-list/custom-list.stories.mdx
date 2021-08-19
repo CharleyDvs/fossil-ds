@@ -1,0 +1,29 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
+import { CustomList } from './custom-list'
+
+<Meta
+  title="Components/CustomList"
+  component={CustomList}
+  args={{
+    listItems: [{ text: 'Item 1' }, { text: 'Item 2' }, { text: 'Item 3' }],
+  }}
+  decorators={[
+    (Story) => (
+      <div
+        style={{
+          width: '500px',
+          border: 'solid 1px #dfdfdf',
+          borderRadius: '6px',
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ]}
+/>
+
+## CustomList
+
+<Canvas>
+  <Story name="CustomList">{(args) => <CustomList {...args} />}</Story>
+</Canvas>

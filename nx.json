@@ -47,6 +47,10 @@
     "fossil-ui": {
       "tags": []
     },
+    "fossil-ui-e2e": {
+      "tags": [],
+      "implicitDependencies": ["fossil-ui"]
+    },
     "shared-styles": {
       "tags": []
     }
