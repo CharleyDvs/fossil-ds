@@ -1,7 +1,6 @@
 import styles from './app.module.scss'
 import { Switch, Route } from 'react-router-dom'
-import { SideMenu } from '@fossil-ds/fossil-layout'
-import { ThemeSwitch } from '../layout'
+import { SideMenu, ThemeSwitch } from '@fossil-ds/fossil-layout'
 import { Documentation } from '../pages'
 
 const Home = () => <h1>Hello World</h1>
