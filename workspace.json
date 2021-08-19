@@ -106,6 +106,27 @@
         }
       }
     },
+    "fossil-layout": {
+      "root": "libs/fossil-layout",
+      "sourceRoot": "libs/fossil-layout/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/fossil-layout/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/fossil-layout"],
+          "options": {
+            "jestConfig": "libs/fossil-layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "fossil-ui": {
       "root": "libs/fossil-ui",
       "sourceRoot": "libs/fossil-ui/src",

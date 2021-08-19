@@ -35,6 +35,9 @@
       "tags": [],
       "implicitDependencies": ["fossil-ds"]
     },
+    "fossil-layout": {
+      "tags": []
+    },
     "fossil-ui": {
       "tags": []
     },
