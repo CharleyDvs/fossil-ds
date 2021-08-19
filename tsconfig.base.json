@@ -16,8 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@fossil-ds/fossil-ui": ["libs/fossil-ui/src/index.ts"],
-      "@fossil-ds/shared/styles": ["libs/shared/styles/src/index.ts"],
-      "@fossil-ds/shared/utils": ["libs/shared/utils/src/index.ts"]
+      "@fossil-ds/shared/styles": ["libs/shared/styles/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

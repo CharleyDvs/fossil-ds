@@ -1,6 +1,6 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, useEffect } from 'react'
 
-type Theme = 'light' | 'dark'
+type Theme = 'Light' | 'Dark'
 interface ThemeContext {
   theme: Theme
   toggleTheme: () => void
@@ -9,10 +9,14 @@ interface ThemeContext {
 export const ThemeContext = createContext<ThemeContext>({} as ThemeContext)
 
 export const ThemeProvider: React.FC = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>('light')
+  const [theme, setTheme] = useState<Theme>('Light')
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
+    setTheme(theme === 'Light' ? 'Dark' : 'Light')
   }
+
+  useEffect(() => {
+    console.log(theme)
+  }, [theme])
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

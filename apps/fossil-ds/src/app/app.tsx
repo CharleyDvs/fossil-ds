@@ -1,6 +1,6 @@
 import styles from './app.module.scss'
 import { Switch, Route } from 'react-router-dom'
-import { SideMenu } from '../layout/side-menu'
+import { SideMenu, ThemeSwitch } from '../layout'
 
 const Home = () => <h1>Hello World</h1>
 
@@ -17,6 +17,7 @@ export function App() {
         </Route>
         <Route exact path="/colors">
           <h1>Color</h1>
+          <ThemeSwitch />
         </Route>
       </Switch>
     </div>
