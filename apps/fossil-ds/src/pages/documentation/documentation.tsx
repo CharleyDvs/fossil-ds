@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { Documentation as DocumentationComp } from '@fossil-ds/fossil-documentation'
+import { Documentation as FossilDocumentation } from '@fossil-ds/fossil-documentation'
 interface ParamsProps {
   componentName: string
 }
@@ -7,5 +7,5 @@ interface ParamsProps {
 export const Documentation = () => {
   const { componentName } = useParams<ParamsProps>()
 
-  return <DocumentationComp fileName={componentName} />
+  return <FossilDocumentation component={componentName} />
 }

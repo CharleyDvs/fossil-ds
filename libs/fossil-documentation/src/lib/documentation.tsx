@@ -29,10 +29,10 @@ const ErrorFallback = ({
 }
 
 interface DocumentationProps {
-  fileName: string
+  component: string
 }
 
-export const Documentation = ({ fileName }: DocumentationProps) => {
+export const Documentation = ({ component }: DocumentationProps) => {
   const Component = (componentName: string) =>
     lazy(
       () =>
@@ -40,7 +40,7 @@ export const Documentation = ({ fileName }: DocumentationProps) => {
           `!babel-loader!@mdx-js/loader!./components/${componentName}.mdx`
         ),
     )
-  const CurrentDocumentation = Component(fileName)
+  const CurrentDocumentation = Component(component)
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
