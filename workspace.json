@@ -1,6 +1,27 @@
 {
   "version": 2,
   "projects": {
+    "fossil-containers": {
+      "root": "libs/fossil-containers",
+      "sourceRoot": "libs/fossil-containers/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/fossil-containers/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/fossil-containers"],
+          "options": {
+            "jestConfig": "libs/fossil-containers/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "fossil-documentation": {
       "root": "libs/fossil-documentation",
       "sourceRoot": "libs/fossil-documentation/src",
