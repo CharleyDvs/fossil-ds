@@ -9,7 +9,7 @@ import { HiChevronUp, HiChevronDown } from 'react-icons/hi'
 
 export interface ListOption {
   icon?: React.ReactNode
-  text?: string
+  text: string
   className?: string
   clickHandler?: () => void
 }
