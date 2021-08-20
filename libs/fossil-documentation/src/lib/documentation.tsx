@@ -1,29 +1,46 @@
 import { Suspense, lazy } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { useHistory } from 'react-router-dom'
+import { Alert } from '@material-ui/lab'
+import Button from '@material-ui/core/Button'
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
+import { DocumentationSkeleton } from '@fossil-ds/fossil-ui'
 
 interface ErrorFallbackProps {
   error: Error
   resetErrorBoundary?: () => void
 }
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    margin: {
+      marginLeft: theme.spacing(1),
+    },
+  }),
+)
+
 const ErrorFallback = ({
   error,
   resetErrorBoundary,
 }: ErrorFallbackProps): JSX.Element => {
   const history = useHistory()
+  const classes = useStyles()
 
   return (
     <div role="alert">
-      <p>The component doesn't exist or there's no documentation available</p>
-      <button
-        onClick={() => {
-          if (resetErrorBoundary) resetErrorBoundary()
-          history.push('/')
-        }}
-      >
-        Go back to Home
-      </button>
+      <Alert severity="error">
+        The component doesn't exist or there's no documentation available
+        <Button
+          size="small"
+          className={classes.margin}
+          onClick={() => {
+            if (resetErrorBoundary) resetErrorBoundary()
+            history.push('/')
+          }}
+        >
+          Go back to Home
+        </Button>
+      </Alert>
     </div>
   )
 }
@@ -44,7 +61,7 @@ export const Documentation = ({ component }: DocumentationProps) => {
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<DocumentationSkeleton />}>
         <CurrentDocumentation />
       </Suspense>
     </ErrorBoundary>
