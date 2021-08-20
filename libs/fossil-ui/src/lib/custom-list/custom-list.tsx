@@ -10,6 +10,7 @@ import { HiChevronUp, HiChevronDown } from 'react-icons/hi'
 export interface ListOption {
   icon?: React.ReactNode
   text?: string
+  className?: string
   clickHandler?: () => void
 }
 
@@ -23,13 +24,24 @@ export interface CustomListProps {
   listItems: CollapseListOption[]
 }
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    nested: {
+      paddingLeft: theme.spacing(6),
+    },
+  }),
+)
+
 export const CustomList = ({ listItems }: CustomListProps): JSX.Element => {
-  const ListOption = ({ clickHandler, icon, text }: ListOption) => (
+  const styles = useStyles()
+
+  const ListOption = ({ clickHandler, icon, text, ...rest }: ListOption) => (
     <ListItem
       button
       onClick={() => {
         if (clickHandler) clickHandler()
       }}
+      {...rest}
     >
       <ListItemIcon>{icon}</ListItemIcon>
       <ListItemText primary={text} />
@@ -54,9 +66,13 @@ export const CustomList = ({ listItems }: CustomListProps): JSX.Element => {
           {open ? <HiChevronUp /> : <HiChevronDown />}
         </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
+          <List component="div">
             {collapseListItems?.map((props: ListOption, index: number) => (
-              <ListOption key={`${props.text}-${index}`} {...props} />
+              <ListOption
+                key={`${props.text}-${index}`}
+                className={styles.nested}
+                {...props}
+              />
             ))}
           </List>
         </Collapse>
@@ -76,5 +92,3 @@ export const CustomList = ({ listItems }: CustomListProps): JSX.Element => {
     </List>
   )
 }
-
-export default CustomList

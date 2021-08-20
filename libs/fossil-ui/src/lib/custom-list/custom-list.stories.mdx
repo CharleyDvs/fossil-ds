@@ -1,29 +1,89 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs'
+import { Meta, Story, Canvas, Source } from '@storybook/addon-docs'
 import { CustomList } from './custom-list'
+import { HiDocument, HiFolder } from 'react-icons/hi'
 
 <Meta
   title="Components/CustomList"
   component={CustomList}
   args={{
-    listItems: [{ text: 'Item 1' }, { text: 'Item 2' }, { text: 'Item 3' }],
+    listItems: [
+      { text: 'Item 1' },
+      {
+        text: 'Item 2',
+        isCollapse: true,
+        icon: <HiFolder />,
+        collapseListItems: [
+          { text: 'Sub-item 1', icon: <HiDocument /> },
+          { text: 'Sub-item 2', icon: <HiDocument /> },
+          { text: 'Sub-item 3', icon: <HiDocument /> },
+        ],
+      },
+      { text: 'Item 3' },
+    ],
   }}
   decorators={[
     (Story) => (
       <div
         style={{
-          width: '500px',
+          width: '300px',
           border: 'solid 1px #dfdfdf',
-          borderRadius: '6px',
+          borderRadius: '8px',
+          boxShadow: '0px 0px 10px #d1d1d1',
         }}
       >
-        <Story />
+        {Story()}
       </div>
     ),
   ]}
 />
 
-## CustomList
+# CustomList
 
 <Canvas>
   <Story name="CustomList">{(args) => <CustomList {...args} />}</Story>
 </Canvas>
+
+## Code Example
+
+```
+import {
+  CustomList,
+  CollapseListOption,
+} from '@fossil-ds/fossil-ui'
+import { HiHome, HiCog, HiColorSwatch } from 'react-icons/hi'
+
+const List = () => {
+  const menuItems: CollapseListOption[] = [
+    {
+      icon: <HiHome />,
+      text: 'Home',
+      clickHandler: () => {
+        push('/')
+      },
+    },
+    {
+      icon: <HiCog />,
+      isCollapse: true,
+      text: 'Components',
+      collapseListItems: [
+        {
+          text: 'Button',
+          clickHandler: () => {
+            console.log('Item clicked')
+          },
+        },
+      ],
+    },
+    {
+      icon: <HiColorSwatch />,
+      text: 'Colors',
+      clickHandler: () => {
+            console.log('Item clicked')
+      },
+    },
+  ]
+
+  return <CustomList listItems={menuItems} />
+}
+
+```
