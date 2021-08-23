@@ -21,7 +21,8 @@ export const TextLink = ({
   const styles = useStyles()
 
   return (
-    <div
+    <span
+      role="link"
       className={styles.link}
       onClick={() => {
         if (onClick) onClick()
@@ -29,6 +30,6 @@ export const TextLink = ({
     >
       {icon}
       {children}
-    </div>
+    </span>
   )
 }
