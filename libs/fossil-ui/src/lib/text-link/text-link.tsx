@@ -1,7 +1,7 @@
 import { makeStyles, Theme } from '@material-ui/core/styles'
 
 export interface TextLinkProps {
-  datatTestId: string
+  dataTestId: string
   children?: React.ReactNode
   icon?: JSX.Element
   onClick?: () => void
@@ -26,7 +26,7 @@ export const TextLink = ({
   icon,
   onClick,
   children,
-  datatTestId,
+  dataTestId,
   ...rest
 }: TextLinkProps): JSX.Element => {
   const styles = useStyles()
@@ -35,7 +35,7 @@ export const TextLink = ({
     <span
       role="link"
       className={styles.link}
-      data-testid={datatTestId}
+      data-testid={dataTestId}
       onClick={() => {
         if (onClick) onClick()
       }}

@@ -6,14 +6,17 @@ import { HiArrowRight } from 'react-icons/hi'
   title="Components/TextLink"
   component={TextLink}
   args={{
+    children: 'Go to Home',
     icon: <HiArrowRight />,
+  }}
+  argTypes={{
+    dataTestId: { table: { disable: true } },
+    icon: { control: { disable: true } },
   }}
 />
 
 # TextLink
 
 <Canvas>
-  <Story name="TextLink">
-    {(args) => <TextLink {...args}>Go to home</TextLink>}
-  </Story>
+  <Story name="TextLink">{(args) => <TextLink {...args} />}</Story>
 </Canvas>

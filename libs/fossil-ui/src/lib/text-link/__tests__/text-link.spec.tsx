@@ -11,7 +11,7 @@ describe('<TextLink />', () => {
 
   const props: TextLinkProps = {
     children: 'Test link',
-    datatTestId: 'test-link',
+    dataTestId: 'test-link',
     icon: <HiArrowRight />,
     onClick: jest.fn(),
   }
