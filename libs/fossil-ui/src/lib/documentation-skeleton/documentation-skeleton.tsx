@@ -1,6 +1,10 @@
 import Skeleton from '@material-ui/lab/Skeleton'
 import { makeStyles } from '@material-ui/core/styles'
 
+export interface DocumentationSkeletonProps {
+  dataTestId?: string
+}
+
 const useStyles = makeStyles({
   root: {
     width: 250,
@@ -8,11 +12,13 @@ const useStyles = makeStyles({
   },
 })
 
-export const DocumentationSkeleton = () => {
+export const DocumentationSkeleton = ({
+  dataTestId,
+}: DocumentationSkeletonProps) => {
   const styles = useStyles()
 
   return (
-    <div className={styles.root}>
+    <div data-testid={dataTestId} className={styles.root}>
       <Skeleton
         variant="text"
         height={24}
