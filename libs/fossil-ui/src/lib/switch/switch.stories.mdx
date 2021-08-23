@@ -1,0 +1,19 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs'
+import { Switch } from './switch.tsx'
+
+<Meta
+  title="Components/Switch"
+  component={Switch}
+  args={{
+    label: 'Test Switch',
+  }}
+  argTypes={{
+    value: { control: false },
+  }}
+/>
+
+# Switch
+
+<Canvas>
+  <Story name="Switch">{(args) => <Switch {...args} />}</Story>
+</Canvas>
