@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, Theme } from '@material-ui/core/styles'
 
 interface TextLinkProps {
   children?: React.ReactNode
@@ -6,11 +6,20 @@ interface TextLinkProps {
   onClick?: () => void
 }
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme: Theme) => ({
   link: {
     cursor: 'pointer',
+    transition: 'all ease .5s',
+    position: 'relative',
+    '&:hover': {
+      textDecoration: 'underline',
+      opacity: '.7',
+    },
   },
-})
+  icon: {
+    marginRight: theme.spacing(0.5),
+  },
+}))
 
 export const TextLink = ({
   icon,
@@ -27,8 +36,9 @@ export const TextLink = ({
       onClick={() => {
         if (onClick) onClick()
       }}
+      {...rest}
     >
-      {icon}
+      <span className={styles.icon}>{icon}</span>
       {children}
     </span>
   )
