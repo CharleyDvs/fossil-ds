@@ -5,7 +5,7 @@ describe('<Switch />', () => {
   let component: (props: SwitchProps) => RenderResult
 
   beforeAll(() => {
-    component = (props: SwitchProps) => render(<Switch {...props} />)
+    component = (props) => render(<Switch {...props} />)
   })
 
   const props: SwitchProps = {
