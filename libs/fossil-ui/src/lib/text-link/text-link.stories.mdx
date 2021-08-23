@@ -1,0 +1,18 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs'
+import { TextLink } from './text-link'
+
+<Meta
+  title="Components/TextLink"
+  component={TextLink}
+  args={{
+    url: '/',
+  }}
+/>
+
+# TextLink
+
+<Canvas>
+  <Story name="TextLink">
+    {(args) => <TextLink {...args}>Go to home</TextLink>}
+  </Story>
+</Canvas>
