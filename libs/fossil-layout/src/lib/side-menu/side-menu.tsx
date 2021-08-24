@@ -13,7 +13,7 @@ const Menulist = () => {
     {
       icon: <HiHome />,
       text: 'Home',
-      clickHandler: () => {
+      onClick: () => {
         push('/')
       },
     },
@@ -24,7 +24,7 @@ const Menulist = () => {
       collapseListItems: [
         {
           text: 'Button',
-          clickHandler: () => {
+          onClick: () => {
             push('/components/button')
           },
         },
@@ -33,7 +33,7 @@ const Menulist = () => {
     {
       icon: <HiColorSwatch />,
       text: 'Colors',
-      clickHandler: () => {
+      onClick: () => {
         push('/colors')
       },
     },

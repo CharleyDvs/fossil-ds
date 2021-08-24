@@ -8,10 +8,11 @@ import Collapse from '@material-ui/core/Collapse'
 import { HiChevronUp, HiChevronDown } from 'react-icons/hi'
 
 export interface ListOption {
+  dataTestId?: string
   icon?: React.ReactNode
   text: string
   className?: string
-  clickHandler?: () => void
+  onClick?: () => void
 }
 
 export interface CollapseListOption extends ListOption {
@@ -21,6 +22,7 @@ export interface CollapseListOption extends ListOption {
 
 /* eslint-disable-next-line */
 export interface CustomListProps {
+  dataTestId?: string
   listItems: CollapseListOption[]
 }
 
@@ -32,14 +34,17 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 )
 
-export const CustomList = ({ listItems }: CustomListProps): JSX.Element => {
+export const CustomList = ({
+  listItems,
+  dataTestId,
+}: CustomListProps): JSX.Element => {
   const styles = useStyles()
 
-  const ListOption = ({ clickHandler, icon, text, ...rest }: ListOption) => (
+  const ListOption = ({ onClick, icon, text, ...rest }: ListOption) => (
     <ListItem
       button
       onClick={() => {
-        if (clickHandler) clickHandler()
+        if (onClick) onClick()
       }}
       {...rest}
     >
@@ -81,7 +86,7 @@ export const CustomList = ({ listItems }: CustomListProps): JSX.Element => {
   }
 
   return (
-    <List>
+    <List data-testid={dataTestId}>
       {listItems.map(({ isCollapse, ...props }, index: number) =>
         isCollapse ? (
           <CollapsableList key={`${props.text}-${index}`} {...props} />
