@@ -1,3 +1,4 @@
+export * from './lib/text-input/text-input'
 export * from './lib/text-link/text-link'
 export * from './lib/documentation-skeleton/documentation-skeleton'
 export * from './lib/switch/switch'
