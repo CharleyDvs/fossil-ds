@@ -1,32 +1,54 @@
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import { TextInput } from '../text-input/text-input'
+import { Switch } from '../switch/switch'
 
-const MockProps: ComponentProp[] = [
-  {
-    propLabel: 'Inner Text',
-    type: 'textInput',
-  },
-]
-
-type PropType = 'textInput'
+type PropType = 'textInput' | 'switch'
 
 interface ComponentProp {
-  propLabel: string
+  propName: string
   type: PropType
+  value?: string
+  onChange?: () => void
 }
 
-/* eslint-disable-next-line */
 export interface PropsControlsProps {
-  ComponentProps: ComponentProp[]
+  propList: ComponentProp[]
+  componentName: string
 }
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    controlList: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-end',
+      listStyle: 'none',
+      padding: 0,
+      '& li': {
+        marginTop: theme.spacing(1),
+      },
+    },
+  }),
+)
 
 export const PropsControls = ({
-  ComponentProps = MockProps,
+  propList,
+  componentName,
 }: PropsControlsProps) => {
+  const styles = useStyles()
+
   return (
     <div>
-      <ul>
-        {ComponentProps.map((propObj, propIdx) => (
-          <li key={`${propObj.propLabel}-${propIdx}`}>{propObj.propLabel}</li>
+      <h2>{componentName} Props</h2>
+      <ul className={styles.controlList}>
+        {propList.map((propObj, propIdx) => (
+          <li key={`${propObj.propName}-${propIdx}`}>
+            {propObj.type === 'textInput' ? (
+              <TextInput label={propObj.propName} {...propObj} />
+            ) : propObj.type === 'switch' ? (
+              <Switch label={propObj.propName} {...propObj} />
+            ) : null}
+          </li>
         ))}
       </ul>
     </div>

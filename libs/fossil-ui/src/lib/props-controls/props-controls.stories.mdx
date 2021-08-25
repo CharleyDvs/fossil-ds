@@ -1,0 +1,51 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs'
+import { PropsControls } from './props-controls'
+
+<Meta
+  title="Components/PropsControls"
+  component={PropsControls}
+  args={{
+    componentName: 'Component',
+    propList: [
+      {
+        propName: 'PropName 1',
+        type: 'textInput',
+      },
+      {
+        propName: 'PropName 2',
+        type: 'switch',
+      },
+      {
+        propName: 'PropName 3',
+        type: 'switch',
+      },
+      {
+        propName: 'PropName 4',
+        type: 'switch',
+      },
+    ],
+  }}
+  decorators={[
+    (Story) => (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          width: '300px',
+          border: 'solid 1px #dfdfdf',
+          borderRadius: '8px',
+          boxShadow: '0px 0px 10px #d1d1d1',
+        }}
+      >
+        {Story()}
+      </div>
+    ),
+  ]}
+/>
+
+# PropsControls
+
+<Canvas>
+  <Story name="PropsControls">{(args) => <PropsControls {...args} />}</Story>
+</Canvas>

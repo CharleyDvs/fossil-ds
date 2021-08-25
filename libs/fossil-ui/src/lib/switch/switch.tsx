@@ -6,17 +6,20 @@ export interface SwitchProps {
   value?: string
   label: string
   dataTestId?: string
-  onChange: () => void
+  disabled?: boolean
+  onChange?: () => void
 }
 
 export function Switch({
   value,
   label,
   dataTestId,
+  disabled,
   onChange,
 }: SwitchProps): JSX.Element {
   return (
     <FormControlLabel
+      disabled={disabled}
       value={value}
       control={<MUSwitch color="primary" />}
       data-testid={dataTestId}
