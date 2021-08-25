@@ -1,0 +1,40 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs'
+import { TextInput } from './text-input'
+
+<Meta
+  title="Components/TextInput"
+  component={TextInput}
+  args={{
+    label: 'Input example',
+  }}
+  argTypes={{
+    variant: { table: { disable: true } },
+    dataTestId: { table: { disable: true } },
+    hiddenLabel: { table: { disable: true } },
+    ref: { control: { disable: true } },
+    focused: { control: { disable: true } },
+  }}
+  decorators={[
+    (Story) => (
+      <div
+        style={{
+          padding: '0 8px',
+        }}
+      >
+        {Story()}
+      </div>
+    ),
+  ]}
+/>
+
+# TextInput
+
+<Canvas>
+  <Story name="default">{(args) => <TextInput {...args} />}</Story>
+  <Story name="disabled" args={{ disabled: true }}>
+    {(args) => <TextInput {...args} />}
+  </Story>
+  <Story name="error" args={{ error: true, helperText: 'Error message' }}>
+    {(args) => <TextInput {...args} />}
+  </Story>
+</Canvas>
