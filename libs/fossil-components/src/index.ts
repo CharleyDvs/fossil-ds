@@ -1,1 +1,1 @@
-export * from './lib/fossil-components'
+export * from './lib/button/button'
