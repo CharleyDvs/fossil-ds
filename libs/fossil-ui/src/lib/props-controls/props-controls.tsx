@@ -39,17 +39,21 @@ export const PropsControls = ({
 
   return (
     <div>
-      <h3>{componentName} Props</h3>
+      <h2>{componentName} Props</h2>
       <ul className={styles.controlList}>
-        {propList.map((propObj, propIdx) => (
-          <li key={`${propObj.propName}-${propIdx}`}>
-            {propObj.type === 'textInput' ? (
-              <TextInput label={propObj.propName} {...propObj} />
-            ) : propObj.type === 'switch' ? (
-              <Switch label={propObj.propName} {...propObj} />
-            ) : null}
-          </li>
-        ))}
+        {propList.map((propObj, propIdx) => {
+          const { propName, ...rest } = propObj
+
+          return (
+            <li key={`${propName}-${propIdx}`}>
+              {propObj.type === 'textInput' ? (
+                <TextInput label={propName} {...rest} />
+              ) : propObj.type === 'switch' ? (
+                <Switch label={propName} {...rest} />
+              ) : null}
+            </li>
+          )
+        })}
       </ul>
     </div>
   )

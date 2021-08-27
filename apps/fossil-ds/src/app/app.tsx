@@ -29,6 +29,7 @@ export function App() {
             component={<Button />}
             componentName="Button"
             propList={propList}
+            shortDescription="A button toggles a click event"
           />
         </Route>
         <Route path="/components/:componentName">
