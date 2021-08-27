@@ -28,6 +28,9 @@
     ]
   },
   "projects": {
+    "fossil-components": {
+      "tags": []
+    },
     "fossil-containers": {
       "tags": []
     },

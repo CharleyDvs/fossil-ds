@@ -1,13 +1,14 @@
 import './switch.module.scss'
 import { FormControlLabel, Switch as MUSwitch } from '@material-ui/core'
+import React from 'react'
 
 /* eslint-disable-next-line */
 export interface SwitchProps {
-  value?: string
+  value?: string | boolean
   label: string
   dataTestId?: string
   disabled?: boolean
-  onChange?: () => void
+  onChange?: (e: React.ChangeEvent<Record<string, string>>) => void
 }
 
 export function Switch({
@@ -25,8 +26,8 @@ export function Switch({
       data-testid={dataTestId}
       label={label}
       labelPlacement="start"
-      onChange={() => {
-        if (onChange) onChange()
+      onChange={(e: React.ChangeEvent<Record<string, string>>) => {
+        if (onChange) onChange(e)
       }}
     />
   )

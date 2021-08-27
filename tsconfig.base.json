@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@fossil-ds/fossil-components": ["libs/fossil-components/src/index.ts"],
       "@fossil-ds/fossil-containers": ["libs/fossil-containers/src/index.ts"],
       "@fossil-ds/fossil-documentation": [
         "libs/fossil-documentation/src/index.ts"

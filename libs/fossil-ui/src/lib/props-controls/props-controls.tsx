@@ -4,11 +4,11 @@ import { Switch } from '../switch/switch'
 
 type PropType = 'textInput' | 'switch'
 
-interface ComponentProp {
+export interface ComponentProp {
   propName: string
   type: PropType
-  value?: string
-  onChange?: () => void
+  value?: string | boolean
+  onChange?: (e: React.ChangeEvent<Record<string, string>>) => void
 }
 
 export interface PropsControlsProps {
@@ -39,7 +39,7 @@ export const PropsControls = ({
 
   return (
     <div>
-      <h2>{componentName} Props</h2>
+      <h3>{componentName} Props</h3>
       <ul className={styles.controlList}>
         {propList.map((propObj, propIdx) => (
           <li key={`${propObj.propName}-${propIdx}`}>
