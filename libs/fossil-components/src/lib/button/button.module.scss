@@ -1,0 +1,33 @@
+.button {
+  border: solid 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  padding: 16px;
+  transition: all ease 0.5s;
+}
+
+.leftIcon {
+  margin-right: 8px;
+}
+
+.rightIcon {
+  margin-left: 8px;
+}
+
+.outlined {
+  background: none;
+  border-color: green;
+  color: green;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.loading {
+  color: green;
+  height: 1rem;
+  margin: 0 1rem;
+}

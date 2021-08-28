@@ -1,9 +1,31 @@
-export const Box = () => (
-  <div style={{ padding: 20, backgroundColor: 'tomato' }} />
-)
+import { HiHome } from 'react-icons/hi'
+import { Button } from '@fossil-ds/fossil-components'
+import { ComponentPlayground } from '@fossil-ds/fossil-layout'
 
-# Hello, world!
-
-This is **markdown** with <span style={{color: "red"}}>JSX</span>: MDX!
-
-<Box />
+<ComponentPlayground
+  component={[
+    <Button />,
+    <Button leftIcon={<HiHome />} />,
+    <Button rightIcon={<HiHome />} />,
+  ]}
+  componentName="Button"
+  propList={[
+    {
+      propName: 'label',
+      type: 'textInput',
+    },
+    {
+      propName: 'disabled',
+      type: 'switch',
+    },
+    {
+      propName: 'outlined',
+      type: 'switch',
+    },
+    {
+      propName: 'loading',
+      type: 'switch',
+    },
+  ]}
+  shortDescription="A button toggles a click event"
+/>

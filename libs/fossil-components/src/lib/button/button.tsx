@@ -1,20 +1,45 @@
 import React from 'react'
-import './button.module.scss'
+import cx from 'classnames'
+import { CircularProgress } from '@material-ui/core'
+import cl from './button.module.scss'
 
 /* eslint-disable-next-line */
-export interface ButtonProps {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<React.ReactNode> {
   leftIcon?: React.ReactNode
   label?: string
+  loading?: boolean
   rightIcon?: React.ReactNode
-  onClick?: () => void
+  outlined?: boolean
 }
 
-export function Button({ label, leftIcon, rightIcon, ...rest }: ButtonProps) {
+export function Button({
+  disabled,
+  label,
+  leftIcon,
+  loading,
+  outlined,
+  rightIcon,
+  ...rest
+}: ButtonProps) {
   return (
-    <button {...rest}>
-      {leftIcon}
-      {label}
-      {rightIcon}
+    <button
+      className={cx(
+        cl.button,
+        outlined && cl.outlined,
+        disabled && cl.disabled,
+      )}
+      {...rest}
+    >
+      {loading ? (
+        <CircularProgress className={cl.loading} size={12} />
+      ) : (
+        <>
+          {leftIcon && <div className={cl.leftIcon}>{leftIcon}</div>}
+          {label}
+          {rightIcon && <div className={cl.rightIcon}>{rightIcon}</div>}
+        </>
+      )}
     </button>
   )
 }

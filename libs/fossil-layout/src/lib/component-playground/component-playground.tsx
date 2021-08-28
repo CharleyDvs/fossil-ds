@@ -49,9 +49,16 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       alignSelf: 'stretch',
       display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-around',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
       width: '80%',
+      maxWidth: '80%',
+    },
+    componentWrapper: {
+      margin: '4px 8px',
+      '& > *': {
+        transition: 'all ease .5s',
+      },
     },
     playgroundTitle: {
       position: 'absolute',
@@ -59,20 +66,21 @@ const useStyles = makeStyles((theme: Theme) =>
       left: theme.spacing(2),
     },
     description: {
-      position: 'absolute',
       bottom: theme.spacing(2),
-      left: theme.spacing(2),
-      width: '70%',
+      left: '50%',
+      position: 'absolute',
+      transform: 'translateX(-50%)',
+      width: '80%',
     },
   }),
 )
 
-export function ComponentPlayground({
+export const ComponentPlayground = ({
   componentName,
   component,
   propList,
   shortDescription,
-}: ComponentPlaygroundProps) {
+}: ComponentPlaygroundProps): JSX.Element => {
   const styles = useStyles()
   const [currentComponentProps, setCurrentComponentProps] =
     useState<ComponentPlaygroundState>({})
@@ -122,7 +130,10 @@ export function ComponentPlayground({
         <h1 className={styles.playgroundTitle}>{componentName}</h1>
         {Array.isArray(component)
           ? component.map((compElem, compIdx) => (
-              <div key={`${componentName}-example-${compIdx}`}>
+              <div
+                className={styles.componentWrapper}
+                key={`${componentName}-example-${compIdx}`}
+              >
                 {React.cloneElement(compElem, currentComponentProps)}
               </div>
             ))
@@ -142,5 +153,3 @@ export function ComponentPlayground({
     </div>
   )
 }
-
-export default ComponentPlayground
