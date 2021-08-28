@@ -3,17 +3,13 @@ import { PropsControls, PropsControlsProps } from '@fossil-ds/fossil-ui'
 import { Alert } from '@material-ui/lab'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 
+type ReactComponent = React.ReactElement<
+  React.ReactNode,
+  string | React.JSXElementConstructor<React.ReactNode>
+>
 /* eslint-disable-next-line */
 export interface ComponentPlaygroundProps extends PropsControlsProps {
-  component:
-    | React.ReactElement<
-        React.ReactNode,
-        string | React.JSXElementConstructor<React.ReactNode>
-      >
-    | React.ReactElement<
-        React.ReactNode,
-        string | React.JSXElementConstructor<React.ReactNode>
-      >[]
+  component: ReactComponent | ReactComponent[]
   shortDescription?: string
 }
 
@@ -62,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     playgroundTitle: {
       position: 'absolute',
-      top: 0,
+      top: theme.spacing(2),
       left: theme.spacing(2),
     },
     description: {

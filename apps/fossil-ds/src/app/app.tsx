@@ -1,50 +1,17 @@
-import styles from './app.module.scss'
+import cl from './app.module.scss'
 import { Switch, Route } from 'react-router-dom'
-import {
-  SideMenu,
-  ThemeSwitch,
-  ComponentPlayground,
-} from '@fossil-ds/fossil-layout'
-import { ComponentProp } from '@fossil-ds/fossil-ui'
-import { Button } from '@fossil-ds/fossil-components'
+import { SideMenu, ThemeSwitch } from '@fossil-ds/fossil-layout'
 import { DocumentationPage } from '@fossil-ds/fossil-containers'
 
-import { HiHome } from 'react-icons/hi'
-
 const Home = () => {
-  const componentArray = [
-    <Button />,
-    <Button leftIcon={<HiHome />} />,
-    <Button rightIcon={<HiHome />} />,
-  ]
-
   return <h1>Home</h1>
 }
 
-const propList: ComponentProp[] = [
-  {
-    propName: 'label',
-    type: 'textInput',
-  },
-  {
-    propName: 'disabled',
-    type: 'switch',
-  },
-  {
-    propName: 'outlined',
-    type: 'switch',
-  },
-  {
-    propName: 'loading',
-    type: 'switch',
-  },
-]
-
 export function App() {
   return (
-    <div className={styles.app}>
+    <div className={cl.app}>
       <SideMenu />
-      <div style={{ marginTop: '3rem' }}>
+      <div className={cl.pagesContainer}>
         <Switch>
           <Route exact path="/">
             <Home />
