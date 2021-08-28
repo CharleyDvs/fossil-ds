@@ -51,12 +51,7 @@ interface DocumentationProps {
 
 export const Documentation = ({ component }: DocumentationProps) => {
   const Component = (componentName: string) =>
-    lazy(
-      () =>
-        import(
-          `!babel-loader!@mdx-js/loader!./components/${componentName}.mdx`
-        ),
-    )
+    lazy(() => import(`!babel-loader!@mdx-js/loader!./${componentName}.mdx`))
   const CurrentDocumentation = Component(component)
 
   return (

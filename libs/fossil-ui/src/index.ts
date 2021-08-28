@@ -1,3 +1,4 @@
+export * from './lib/code-block/code-block'
 export * from './lib/props-controls/props-controls'
 export * from './lib/text-input/text-input'
 export * from './lib/text-link/text-link'
