@@ -12,7 +12,9 @@
     "12": { "value": "#e4e4e4" },
     "9": { "value": "#ebebeb" },
     "6": { "value": "#f2f2f2" },
-    "3": { "value": "#f8f8f8" },
-    "0": { "value": "#ffffff" }
+    "3": { "value": "#f8f8f8" }
+  },
+  "white": {
+    "value": "ffffff"
   }
 }

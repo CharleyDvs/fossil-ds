@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { PropsControls, PropsControlsProps } from '@fossil-ds/fossil-ui'
 import { Alert } from '@material-ui/lab'
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
+import { PropsControls, PropsControlsProps } from '@fossil-ds/fossil-ui'
+import { tokens } from '@fossil-ds/shared/styles'
 
 type ReactComponent = React.ReactElement<
   React.ReactNode,
@@ -15,61 +16,59 @@ export interface ComponentPlaygroundProps extends PropsControlsProps {
 
 type ComponentPlaygroundState = { [k: string]: string | boolean }
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    playground: {
-      background: '#222',
-      borderRadius: '12px',
-      boxShadow: '0px 0px 15px #2a2a2a',
-      color: '#dfdfdf',
-      display: 'flex',
-      justifyContent: 'space-between',
-      margin: '0 auto',
-      maxWidth: '900px',
-      height: '500px',
-      padding: theme.spacing(2),
-      position: 'relative',
+const useStyles = makeStyles({
+  playground: {
+    background: tokens.grey[90].value,
+    borderRadius: tokens.spacing[16].value,
+    boxShadow: '0px 0px 15px #2a2a2a',
+    color: '#dfdfdf',
+    display: 'flex',
+    justifyContent: 'space-between',
+    margin: '0 auto',
+    maxWidth: '900px',
+    height: '500px',
+    padding: tokens.spacing[16].value,
+    position: 'relative',
+  },
+  controls: {
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    background: '#fdfdfd',
+    borderRadius: '12px',
+    color: '#222',
+    display: 'flex',
+    flexFlow: 'column wrap',
+    overflowY: 'auto',
+    padding: tokens.spacing[16].value,
+  },
+  componentContainer: {
+    alignContent: 'center',
+    alignSelf: 'stretch',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    width: '80%',
+    maxWidth: '80%',
+  },
+  componentWrapper: {
+    margin: '4px 8px',
+    '& > *': {
+      transition: 'all ease .5s',
     },
-    controls: {
-      alignItems: 'center',
-      alignSelf: 'flex-start',
-      background: '#fdfdfd',
-      borderRadius: '12px',
-      color: '#222',
-      display: 'flex',
-      flexFlow: 'column wrap',
-      overflowY: 'auto',
-      padding: theme.spacing(2),
-    },
-    componentContainer: {
-      alignItems: 'center',
-      alignSelf: 'stretch',
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-      width: '80%',
-      maxWidth: '80%',
-    },
-    componentWrapper: {
-      margin: '4px 8px',
-      '& > *': {
-        transition: 'all ease .5s',
-      },
-    },
-    playgroundTitle: {
-      position: 'absolute',
-      top: theme.spacing(2),
-      left: theme.spacing(2),
-    },
-    description: {
-      bottom: theme.spacing(2),
-      left: '50%',
-      position: 'absolute',
-      transform: 'translateX(-50%)',
-      width: '80%',
-    },
-  }),
-)
+  },
+  playgroundTitle: {
+    position: 'absolute',
+    top: tokens.spacing[16].value,
+    left: tokens.spacing[16].value,
+  },
+  description: {
+    bottom: tokens.spacing[16].value,
+    left: '50%',
+    position: 'absolute',
+    transform: 'translateX(-50%)',
+    width: '80%',
+  },
+})
 
 export const ComponentPlayground = ({
   componentName,

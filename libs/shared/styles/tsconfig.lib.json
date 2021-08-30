@@ -5,6 +5,7 @@
     "declaration": true,
     "types": []
   },
+  "files": ["./variables.d.ts"],
   "include": ["**/*.ts"],
   "exclude": ["**/*.spec.ts"]
 }

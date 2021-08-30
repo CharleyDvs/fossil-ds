@@ -86,7 +86,7 @@
             ],
             "styles": ["apps/fossil-ds/src/styles.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared/styles/src"]
+              "includePaths": ["libs/shared/styles/lib/scss/"]
             },
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
