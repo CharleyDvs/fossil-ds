@@ -1,27 +1,10 @@
 /**
  * Do not edit directly
- * Generated on Mon, 30 Aug 2021 18:47:46 GMT
+ * Generated on Mon, 30 Aug 2021 19:14:55 GMT
  */
 
 module.exports = {
   "grey": {
-    "0": {
-      "value": "#ffffff",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/base.json",
-      "isSource": true,
-      "original": {
-        "value": "#ffffff"
-      },
-      "name": "Grey0",
-      "attributes": {
-        "category": "grey",
-        "type": "0"
-      },
-      "path": [
-        "grey",
-        "0"
-      ]
-    },
     "3": {
       "value": "#f8f8f8",
       "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/base.json",
@@ -243,6 +226,21 @@ module.exports = {
         "100"
       ]
     }
+  },
+  "white": {
+    "value": "#ffffff",
+    "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/base.json",
+    "isSource": true,
+    "original": {
+      "value": "#ffffff"
+    },
+    "name": "White",
+    "attributes": {
+      "category": "white"
+    },
+    "path": [
+      "white"
+    ]
   },
   "font": {
     "size": {

@@ -5,7 +5,7 @@
     "declaration": true,
     "types": []
   },
-  "files": ["./variables.d.ts"],
+  "files": ["./lib/variables.d.ts"],
   "include": ["**/*.ts"],
   "exclude": ["**/*.spec.ts"]
 }

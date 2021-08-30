@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 30 Aug 2021 18:47:46 GMT
+ * Generated on Mon, 30 Aug 2021 19:14:55 GMT
  */
 
 export default tokens;
@@ -23,7 +23,6 @@ declare interface DesignToken {
 
 declare const tokens: {
   "grey": {
-    "0": DesignToken,
     "3": DesignToken,
     "6": DesignToken,
     "9": DesignToken,
@@ -38,6 +37,7 @@ declare const tokens: {
     "90": DesignToken,
     "100": DesignToken
   },
+  "white": DesignToken,
   "font": {
     "size": {
       "8": DesignToken,
