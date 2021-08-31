@@ -13,19 +13,20 @@ interface SelectOption {
 
 export interface SelectProps extends MUSelectProps {
   dataTestId: 'string'
-  selectOptions: SelectOption[]
+  options: SelectOption[]
 }
 
-export function Select({ label, selectOptions, ...rest }: SelectProps) {
+export function Select({ dataTestId, label, options, ...rest }: SelectProps) {
   return (
-    <FormControl variant="filled">
+    <FormControl variant="filled" style={{ minWidth: '190px' }}>
       <InputLabel id={`${label}-select-label`}>{label}</InputLabel>
       <MUSelect
+        data-testid={dataTestId}
         id={`${label}-select`}
         labelId={`${label}-select-label`}
         {...rest}
       >
-        {selectOptions.map((option, idx) => (
+        {options.map((option, idx) => (
           <MenuItem key={`${option.label}-${idx}`} value={option.value}>
             {option.label}
           </MenuItem>

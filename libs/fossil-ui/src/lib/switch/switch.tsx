@@ -1,4 +1,3 @@
-import './switch.module.scss'
 import { FormControlLabel, Switch as MUSwitch } from '@material-ui/core'
 import React from 'react'
 
