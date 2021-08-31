@@ -1,0 +1,29 @@
+@import 'map';
+
+@each $directionKey, $directionValue in map-get($tokens, 'direction') {
+  @each $spaceKey, $spaceValue in map-get($tokens, 'spacing') {
+    .margin-#{$directionKey}-#{$spaceKey} {
+      margin-#{$directionValue}: $spaceValue;
+    }
+  }
+}
+
+@each $spaceKey, $spaceValue in map-get($tokens, 'spacing') {
+  .margin-#{$spaceKey} {
+    margin: $spaceValue;
+  }
+}
+
+@each $directionKey, $directionValue in map-get($tokens, 'direction') {
+  @each $spaceKey, $spaceValue in map-get($tokens, 'spacing') {
+    .padding-#{$directionKey}-#{$spaceKey} {
+      margin-#{$directionValue}: $spaceValue;
+    }
+  }
+}
+
+@each $spaceKey, $spaceValue in map-get($tokens, 'spacing') {
+  .padding-#{$spaceKey} {
+    padding: $spaceValue;
+  }
+}

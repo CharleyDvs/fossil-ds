@@ -1,9 +1,75 @@
 /**
  * Do not edit directly
- * Generated on Mon, 30 Aug 2021 19:14:55 GMT
+ * Generated on Tue, 31 Aug 2021 03:23:22 GMT
  */
 
 :root {
+  --red-10: #ffd5d6;
+  --red-20: #ffabad;
+  --red-30: #ff8284;
+  --red-40: #ff585b;
+  --red-50: #ff2e33;
+  --red-60: #ff040a;
+  --red-70: #d90005;
+  --red-80: #b00004;
+  --red-90: #860003;
+  --red-100: #5c0002;
+  --red-110: #530002;
+  --red-120: #4a0002;
+  --red-130: #400001;
+  --red-140: #370001;
+  --red-150: #2e0001;
+  --red-160: #250001;
+  --red-170: #1c0001;
+  --red-180: #120000;
+  --yellow-10: #fdf7e9;
+  --yellow-20: #fcefd3;
+  --yellow-30: #fae7bd;
+  --yellow-40: #f8dfa7;
+  --yellow-50: #f7d790;
+  --yellow-60: #f5ce7a;
+  --yellow-70: #f3c664;
+  --yellow-80: #f1be4e;
+  --yellow-90: #f0b638;
+  --yellow-100: #eeae22;
+  --yellow-110: #e3a111;
+  --yellow-120: #ca9010;
+  --yellow-130: #b17e0e;
+  --yellow-140: #986c0c;
+  --yellow-150: #7e5a0a;
+  --yellow-160: #654808;
+  --yellow-170: #4c3606;
+  --yellow-180: #332404;
+  --blue-20: #ace0ff;
+  --blue-30: #83d0ff;
+  --blue-40: #59c1ff;
+  --blue-50: #30b1ff;
+  --blue-60: #07a2ff;
+  --blue-70: #008adc;
+  --blue-80: #0070b3;
+  --blue-90: #005689;
+  --blue-100: #003c60;
+  --blue-110: #003656;
+  --blue-120: #00304d;
+  --blue-130: #002a43;
+  --blue-140: #00243a;
+  --blue-150: #001e30;
+  --blue-160: #001826;
+  --green-40: #7efdb0;
+  --green-50: #5efc9c;
+  --green-60: #3efc88;
+  --green-70: #1efb74;
+  --green-80: #04f462;
+  --green-90: #04d455;
+  --green-100: #03B448;
+  --green-110: #03a241;
+  --green-120: #02903a;
+  --green-130: #027e32;
+  --green-140: #026c2b;
+  --green-150: #015a24;
+  --green-160: #01481d;
+  --green-170: #013616;
+  --green-180: #01240e;
   --grey-3: #f8f8f8;
   --grey-6: #f2f2f2;
   --grey-9: #ebebeb;
@@ -39,7 +105,12 @@
   --spacing-24: 24px;
   --spacing-28: 28px;
   --spacing-32: 32px;
+  --spacing-36: 36px;
   --spacing-40: 40px;
   --spacing-44: 44px;
-  --spacing-46: 46px;
+  --spacing-48: 48px;
+  --spacing-52: 52px;
+  --spacing-56: 56px;
+  --spacing-60: 60px;
+  --spacing-64: 64px;
 }

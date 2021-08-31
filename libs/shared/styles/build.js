@@ -11,7 +11,10 @@ const buildPath = path.join(__dirname, 'lib/')
 
 const configurationOutputs = [
   {
-    source: [path.join(__dirname, 'src/map/*.json')],
+    source: [
+      path.join(__dirname, 'src/map/*.json'),
+      path.join(__dirname, 'src/tokens/spacing/spacing.json'),
+    ],
     platforms: {
       scss: {
         transformGroup: 'scss',
@@ -56,6 +59,12 @@ const configurationOutputs = [
             destination: 'js/variables.js',
             format: 'javascript/module',
           },
+        ],
+      },
+      ts: {
+        transformGroup: 'js',
+        buildPath: path.resolve(__dirname) + '/',
+        files: [
           {
             destination: 'variables.d.ts',
             format: 'typescript/module-declarations',

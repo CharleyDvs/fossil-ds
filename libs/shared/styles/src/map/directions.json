@@ -1,0 +1,8 @@
+{
+  "direction": {
+    "top": { "value": "top" },
+    "right": { "value": "right" },
+    "bottom": { "value": "bottom" },
+    "left": { "value": "left" }
+  }
+}
