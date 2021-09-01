@@ -7,12 +7,12 @@ import {
 } from '@material-ui/core'
 
 interface SelectOption {
-  value: 'string'
-  label: 'string'
+  value: string
+  label: string
 }
 
 export interface SelectProps extends MUSelectProps {
-  dataTestId: 'string'
+  dataTestId?: string
   options: SelectOption[]
 }
 
