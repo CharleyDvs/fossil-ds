@@ -14,7 +14,7 @@ export interface ComponentPlaygroundProps extends PropsControlsProps {
   shortDescription?: string
 }
 
-type ComponentPlaygroundState = { [k: string]: string | boolean }
+type ComponentPlaygroundState = { [k: string]: unknown }
 
 const useStyles = makeStyles({
   playground: {
@@ -40,6 +40,7 @@ const useStyles = makeStyles({
     flexFlow: 'column wrap',
     overflowY: 'auto',
     padding: tokens.spacing[16].value,
+    minWidth: '280px',
   },
   componentContainer: {
     alignContent: 'center',
@@ -85,10 +86,20 @@ export const ComponentPlayground = ({
 
     if (type === 'textInput') {
       propObj.value = currentComponentProps[propName]
-      propObj.onChange = (e: React.ChangeEvent<Record<string, string>>) => {
+      propObj.onChange = (e: React.ChangeEvent<{ value: unknown }>) => {
         setCurrentComponentProps({
           ...currentComponentProps,
-          [propName]: e.currentTarget.value,
+          [propName]: e.target.value,
+        })
+      }
+    }
+
+    if (type === 'select') {
+      propObj.value = currentComponentProps[propName]
+      propObj.onChange = (e: React.ChangeEvent<{ value: unknown }>) => {
+        setCurrentComponentProps({
+          ...currentComponentProps,
+          [propName]: e.target.value,
         })
       }
     }
@@ -114,6 +125,7 @@ export const ComponentPlayground = ({
 
       if (type === 'textInput') propsObj[propName] = componentName
       if (type === 'switch') propsObj[propName] = false
+      if (type === 'select') propsObj[propName] = ''
     })
 
     setCurrentComponentProps(propsObj)

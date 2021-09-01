@@ -3,9 +3,10 @@ import cx from 'classnames'
 import { CircularProgress } from '@material-ui/core'
 import cl from './button.module.scss'
 
-/* eslint-disable-next-line */
+type ButtonStatus = 'success' | 'error' | ''
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<React.ReactNode> {
+  status?: ButtonStatus
   leftIcon?: React.ReactNode
   label?: string
   loading?: boolean
@@ -20,17 +21,19 @@ export function Button({
   loading,
   outlined,
   rightIcon,
+  status,
   ...rest
 }: ButtonProps) {
+  const buttonClasses = cx(
+    cl.button,
+    outlined && cl.outlined,
+    disabled && cl.disabled,
+    status === 'success' && cl.success,
+    status === 'error' && cl.error,
+  )
+
   return (
-    <button
-      className={cx(
-        cl.button,
-        outlined && cl.outlined,
-        disabled && cl.disabled,
-      )}
-      {...rest}
-    >
+    <button className={buttonClasses} {...rest}>
       {loading ? (
         <CircularProgress className={cl.loading} size={12} />
       ) : (

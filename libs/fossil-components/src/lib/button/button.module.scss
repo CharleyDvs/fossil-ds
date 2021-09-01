@@ -1,12 +1,19 @@
 @import 'variables';
 
 .button {
-  border: solid 1px;
-  border-radius: 8px;
+  border: 1px solid transparent;
+  border-radius: 3rem;
   cursor: pointer;
   display: flex;
   padding: 16px;
   transition: all ease 0.5s;
+  background: $grey-100;
+  color: $grey-20;
+
+  &:hover {
+    background: $blue-90;
+    border: 1px solid $blue-90;
+  }
 }
 
 .leftIcon {
@@ -18,9 +25,14 @@
 }
 
 .outlined {
+  border: 1px solid $grey-20;
   background: none;
-  border-color: green;
-  color: green;
+  color: $grey-20;
+
+  &:hover {
+    background: $blue-90;
+    border: 1px solid $blue-90;
+  }
 }
 
 .disabled {
@@ -29,7 +41,15 @@
 }
 
 .loading {
-  color: green;
+  color: $grey-20;
   height: 1rem;
   margin: 0 1rem;
+}
+
+.success {
+  background-color: $green-100;
+}
+
+.error {
+  background-color: $red-80;
 }

@@ -16,6 +16,24 @@ import { CodeBlock } from '@fossil-ds/fossil-ui'
       type: 'textInput',
     },
     {
+      propName: 'status',
+      type: 'select',
+      options: [
+        {
+          label: 'error',
+          value: 'error',
+        },
+        {
+          label: 'success',
+          value: 'success',
+        },
+        {
+          label: 'none',
+          value: '',
+        },
+      ],
+    },
+    {
       propName: 'disabled',
       type: 'switch',
     },
@@ -28,7 +46,6 @@ import { CodeBlock } from '@fossil-ds/fossil-ui'
       type: 'switch',
     },
   ]}
-  shortDescription="A button toggles a click event"
 />
 
 <CodeBlock>{'<h1>HI</h1>'}</CodeBlock>

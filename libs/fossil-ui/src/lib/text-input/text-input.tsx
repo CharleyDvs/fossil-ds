@@ -1,6 +1,5 @@
 import { TextField, BaseTextFieldProps } from '@material-ui/core'
 
-/* eslint-disable-next-line */
 export interface TextInputProps extends BaseTextFieldProps {
   dataTestId?: string
 }
@@ -12,7 +11,12 @@ export const TextInput = ({
 }: TextInputProps) => {
   return (
     <div>
-      <TextField data-testid={dataTestId} {...rest} variant="filled" />
+      <TextField
+        defaultValue=""
+        data-testid={dataTestId}
+        variant="filled"
+        {...rest}
+      />
     </div>
   )
 }

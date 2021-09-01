@@ -7,7 +7,7 @@ import {
   FormHelperText,
 } from '@material-ui/core'
 
-interface SelectOption {
+export interface SelectOption {
   value: string
   label: string
 }
@@ -15,7 +15,7 @@ interface SelectOption {
 export interface SelectProps extends MUSelectProps {
   dataTestId?: string
   helperText?: string
-  options: SelectOption[]
+  options?: SelectOption[]
 }
 
 export function Select({
@@ -37,17 +37,19 @@ export function Select({
       <InputLabel id={`${label}-select-label`}>{label}</InputLabel>
       <MUSelect
         data-testid={dataTestId}
+        defaultValue=""
         disabled={disabled}
         error={error}
         id={`${label}-select`}
         labelId={`${label}-select-label`}
         {...rest}
       >
-        {options.map((option, idx) => (
-          <MenuItem key={`${option.label}-${idx}`} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
+        {options !== undefined &&
+          options.map((option, idx) => (
+            <MenuItem key={`${option.label}-${idx}`} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
       </MUSelect>
       {helperText && <FormHelperText>{helperText}</FormHelperText>}
     </FormControl>

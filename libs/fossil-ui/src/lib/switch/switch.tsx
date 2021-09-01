@@ -1,13 +1,14 @@
-import { FormControlLabel, Switch as MUSwitch } from '@material-ui/core'
+import {
+  FormControlLabel,
+  Switch as MUSwitch,
+  SwitchProps as MUSwitchProps,
+} from '@material-ui/core'
 import React from 'react'
 
 /* eslint-disable-next-line */
-export interface SwitchProps {
-  value?: string | boolean
+export interface SwitchProps extends MUSwitchProps {
   label: string
   dataTestId?: string
-  disabled?: boolean
-  onChange?: (e: React.ChangeEvent<Record<string, string>>) => void
 }
 
 export function Switch({
@@ -15,19 +16,16 @@ export function Switch({
   label,
   dataTestId,
   disabled,
-  onChange,
+  ...rest
 }: SwitchProps): JSX.Element {
   return (
     <FormControlLabel
       disabled={disabled}
       value={value}
-      control={<MUSwitch color="primary" />}
+      control={<MUSwitch color="primary" {...rest} />}
       data-testid={dataTestId}
       label={label}
       labelPlacement="start"
-      onChange={(e: React.ChangeEvent<Record<string, string>>) => {
-        if (onChange) onChange(e)
-      }}
     />
   )
 }
