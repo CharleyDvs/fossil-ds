@@ -13,6 +13,10 @@ import { Select } from './select'
       { label: 'Item 3', value: 'item-3' },
     ],
   }}
+  argTypes={{
+    dataTestId: { table: { disable: true } },
+    ref: { table: { disable: true } },
+  }}
 />
 
 export const Template = (args) => {

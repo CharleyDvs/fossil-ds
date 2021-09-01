@@ -49,7 +49,7 @@ export function Select({
           </MenuItem>
         ))}
       </MUSelect>
-      <FormHelperText>{helperText}</FormHelperText>
+      {helperText && <FormHelperText>{helperText}</FormHelperText>}
     </FormControl>
   )
 }
