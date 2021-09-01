@@ -1,5 +1,23 @@
 import { useState } from 'react'
 import { ThemeContext, ThemeValues } from './theme-context'
+import { ThemeProvider, createTheme } from '@material-ui/core'
+import { tokens } from '@fossil-ds/shared/styles'
+
+const lightTheme = createTheme({
+  palette: {
+    primary: {
+      main: tokens.blue[100].value,
+    },
+  },
+})
+
+const darkTheme = createTheme({
+  palette: {
+    primary: {
+      main: tokens.blue[120].value,
+    },
+  },
+})
 
 export const Theme: React.FC = ({ children }) => {
   const [theme, setTheme] = useState<ThemeValues>('Light')
@@ -9,7 +27,9 @@ export const Theme: React.FC = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
+      <ThemeProvider theme={theme === 'Light' ? lightTheme : darkTheme}>
+        {children}
+      </ThemeProvider>
     </ThemeContext.Provider>
   )
 }
