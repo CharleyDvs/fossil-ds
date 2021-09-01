@@ -1,0 +1,7 @@
+{
+  "global": {
+    "background": {
+      "color": { "value": "{grey.40.value}" }
+    }
+  }
+}

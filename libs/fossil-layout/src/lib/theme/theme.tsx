@@ -6,7 +6,14 @@ import { tokens } from '@fossil-ds/shared/styles'
 const lightTheme = createTheme({
   palette: {
     primary: {
-      main: tokens.blue[100].value,
+      light: tokens.brand.color.primary[80].value,
+      main: tokens.brand.color.primary[100].value,
+      dark: tokens.brand.color.primary[120].value,
+    },
+    secondary: {
+      light: tokens.brand.color.secondary[80].value,
+      main: tokens.brand.color.secondary[100].value,
+      dark: tokens.brand.color.secondary[120].value,
     },
   },
 })

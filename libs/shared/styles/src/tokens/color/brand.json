@@ -1,0 +1,20 @@
+{
+  "brand": {
+    "color": {
+      "primary": {
+        "60": { "value": "{blue.60.value}" },
+        "80": { "value": "{blue.80.value}" },
+        "100": { "value": "{blue.100.value}" },
+        "120": { "value": "{blue.120.value}" },
+        "140": { "value": "{blue.140.value}" }
+      },
+      "secondary": {
+        "60": { "value": "{green.60.value}" },
+        "80": { "value": "{green.80.value}" },
+        "100": { "value": "{green.100.value}" },
+        "120": { "value": "{green.120.value}" },
+        "140": { "value": "{green.140.value}" }
+      }
+    }
+  }
+}

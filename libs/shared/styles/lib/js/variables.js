@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 31 Aug 2021 03:23:22 GMT
+ * Generated on Wed, 01 Sep 2021 19:37:15 GMT
  */
 
 module.exports = {
@@ -1372,6 +1372,247 @@ module.exports = {
       "white"
     ]
   },
+  "brand": {
+    "color": {
+      "primary": {
+        "60": {
+          "value": "#07a2ff",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/brand.json",
+          "isSource": true,
+          "original": {
+            "value": "{blue.60.value}"
+          },
+          "name": "BrandColorPrimary60",
+          "attributes": {
+            "category": "brand",
+            "type": "color",
+            "item": "primary",
+            "subitem": "60"
+          },
+          "path": [
+            "brand",
+            "color",
+            "primary",
+            "60"
+          ]
+        },
+        "80": {
+          "value": "#0070b3",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/brand.json",
+          "isSource": true,
+          "original": {
+            "value": "{blue.80.value}"
+          },
+          "name": "BrandColorPrimary80",
+          "attributes": {
+            "category": "brand",
+            "type": "color",
+            "item": "primary",
+            "subitem": "80"
+          },
+          "path": [
+            "brand",
+            "color",
+            "primary",
+            "80"
+          ]
+        },
+        "100": {
+          "value": "#003c60",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/brand.json",
+          "isSource": true,
+          "original": {
+            "value": "{blue.100.value}"
+          },
+          "name": "BrandColorPrimary100",
+          "attributes": {
+            "category": "brand",
+            "type": "color",
+            "item": "primary",
+            "subitem": "100"
+          },
+          "path": [
+            "brand",
+            "color",
+            "primary",
+            "100"
+          ]
+        },
+        "120": {
+          "value": "#00304d",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/brand.json",
+          "isSource": true,
+          "original": {
+            "value": "{blue.120.value}"
+          },
+          "name": "BrandColorPrimary120",
+          "attributes": {
+            "category": "brand",
+            "type": "color",
+            "item": "primary",
+            "subitem": "120"
+          },
+          "path": [
+            "brand",
+            "color",
+            "primary",
+            "120"
+          ]
+        },
+        "140": {
+          "value": "#00243a",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/brand.json",
+          "isSource": true,
+          "original": {
+            "value": "{blue.140.value}"
+          },
+          "name": "BrandColorPrimary140",
+          "attributes": {
+            "category": "brand",
+            "type": "color",
+            "item": "primary",
+            "subitem": "140"
+          },
+          "path": [
+            "brand",
+            "color",
+            "primary",
+            "140"
+          ]
+        }
+      },
+      "secondary": {
+        "60": {
+          "value": "#3efc88",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/brand.json",
+          "isSource": true,
+          "original": {
+            "value": "{green.60.value}"
+          },
+          "name": "BrandColorSecondary60",
+          "attributes": {
+            "category": "brand",
+            "type": "color",
+            "item": "secondary",
+            "subitem": "60"
+          },
+          "path": [
+            "brand",
+            "color",
+            "secondary",
+            "60"
+          ]
+        },
+        "80": {
+          "value": "#04f462",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/brand.json",
+          "isSource": true,
+          "original": {
+            "value": "{green.80.value}"
+          },
+          "name": "BrandColorSecondary80",
+          "attributes": {
+            "category": "brand",
+            "type": "color",
+            "item": "secondary",
+            "subitem": "80"
+          },
+          "path": [
+            "brand",
+            "color",
+            "secondary",
+            "80"
+          ]
+        },
+        "100": {
+          "value": "#03B448",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/brand.json",
+          "isSource": true,
+          "original": {
+            "value": "{green.100.value}"
+          },
+          "name": "BrandColorSecondary100",
+          "attributes": {
+            "category": "brand",
+            "type": "color",
+            "item": "secondary",
+            "subitem": "100"
+          },
+          "path": [
+            "brand",
+            "color",
+            "secondary",
+            "100"
+          ]
+        },
+        "120": {
+          "value": "#02903a",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/brand.json",
+          "isSource": true,
+          "original": {
+            "value": "{green.120.value}"
+          },
+          "name": "BrandColorSecondary120",
+          "attributes": {
+            "category": "brand",
+            "type": "color",
+            "item": "secondary",
+            "subitem": "120"
+          },
+          "path": [
+            "brand",
+            "color",
+            "secondary",
+            "120"
+          ]
+        },
+        "140": {
+          "value": "#026c2b",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/brand.json",
+          "isSource": true,
+          "original": {
+            "value": "{green.140.value}"
+          },
+          "name": "BrandColorSecondary140",
+          "attributes": {
+            "category": "brand",
+            "type": "color",
+            "item": "secondary",
+            "subitem": "140"
+          },
+          "path": [
+            "brand",
+            "color",
+            "secondary",
+            "140"
+          ]
+        }
+      }
+    }
+  },
+  "global": {
+    "background": {
+      "color": {
+        "value": "#a7a7a7",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
+        "isSource": true,
+        "original": {
+          "value": "{grey.40.value}"
+        },
+        "name": "GlobalBackgroundColor",
+        "attributes": {
+          "category": "global",
+          "type": "background",
+          "item": "color"
+        },
+        "path": [
+          "global",
+          "background",
+          "color"
+        ]
+      }
+    }
+  },
   "font": {
     "size": {
       "8": {
@@ -1626,7 +1867,7 @@ module.exports = {
   "spacing": {
     "4": {
       "value": "4px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "4px"
@@ -1643,7 +1884,7 @@ module.exports = {
     },
     "8": {
       "value": "8px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "8px"
@@ -1660,7 +1901,7 @@ module.exports = {
     },
     "12": {
       "value": "12px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "12px"
@@ -1677,7 +1918,7 @@ module.exports = {
     },
     "16": {
       "value": "16px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "16px"
@@ -1694,7 +1935,7 @@ module.exports = {
     },
     "20": {
       "value": "20px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "20px"
@@ -1711,7 +1952,7 @@ module.exports = {
     },
     "24": {
       "value": "24px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "24px"
@@ -1728,7 +1969,7 @@ module.exports = {
     },
     "28": {
       "value": "28px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "28px"
@@ -1745,7 +1986,7 @@ module.exports = {
     },
     "32": {
       "value": "32px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "32px"
@@ -1762,7 +2003,7 @@ module.exports = {
     },
     "36": {
       "value": "36px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "36px"
@@ -1779,7 +2020,7 @@ module.exports = {
     },
     "40": {
       "value": "40px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "40px"
@@ -1796,7 +2037,7 @@ module.exports = {
     },
     "44": {
       "value": "44px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "44px"
@@ -1813,7 +2054,7 @@ module.exports = {
     },
     "48": {
       "value": "48px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "48px"
@@ -1830,7 +2071,7 @@ module.exports = {
     },
     "52": {
       "value": "52px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "52px"
@@ -1847,7 +2088,7 @@ module.exports = {
     },
     "56": {
       "value": "56px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "56px"
@@ -1864,7 +2105,7 @@ module.exports = {
     },
     "60": {
       "value": "60px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "60px"
@@ -1881,7 +2122,7 @@ module.exports = {
     },
     "64": {
       "value": "64px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/spacing.json",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "64px"

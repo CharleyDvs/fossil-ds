@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 31 Aug 2021 03:23:22 GMT
+ * Generated on Wed, 01 Sep 2021 19:37:15 GMT
  */
 
 :root {
@@ -84,6 +84,17 @@
   --grey-90: #383838;
   --grey-100: #222222;
   --white: #ffffff;
+  --brand-color-primary-60: #07a2ff;
+  --brand-color-primary-80: #0070b3;
+  --brand-color-primary-100: #003c60;
+  --brand-color-primary-120: #00304d;
+  --brand-color-primary-140: #00243a;
+  --brand-color-secondary-60: #3efc88;
+  --brand-color-secondary-80: #04f462;
+  --brand-color-secondary-100: #03B448;
+  --brand-color-secondary-120: #02903a;
+  --brand-color-secondary-140: #026c2b;
+  --global-background-color: #a7a7a7;
   --font-size-8: 0.5;
   --font-size-10: 0.625;
   --font-size-11: 0.687;

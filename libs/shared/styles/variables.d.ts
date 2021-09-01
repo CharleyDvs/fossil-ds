@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 31 Aug 2021 03:23:22 GMT
+ * Generated on Wed, 01 Sep 2021 19:37:15 GMT
  */
 
 export default tokens;
@@ -112,6 +112,29 @@ declare const tokens: {
     "100": DesignToken
   },
   "white": DesignToken,
+  "brand": {
+    "color": {
+      "primary": {
+        "60": DesignToken,
+        "80": DesignToken,
+        "100": DesignToken,
+        "120": DesignToken,
+        "140": DesignToken
+      },
+      "secondary": {
+        "60": DesignToken,
+        "80": DesignToken,
+        "100": DesignToken,
+        "120": DesignToken,
+        "140": DesignToken
+      }
+    }
+  },
+  "global": {
+    "background": {
+      "color": DesignToken
+    }
+  },
   "font": {
     "size": {
       "8": DesignToken,
