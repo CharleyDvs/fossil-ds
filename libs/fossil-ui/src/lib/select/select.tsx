@@ -4,6 +4,7 @@ import {
   SelectProps as MUSelectProps,
   MenuItem,
   InputLabel,
+  FormHelperText,
 } from '@material-ui/core'
 
 interface SelectOption {
@@ -13,15 +14,31 @@ interface SelectOption {
 
 export interface SelectProps extends MUSelectProps {
   dataTestId?: string
+  helperText?: string
   options: SelectOption[]
 }
 
-export function Select({ dataTestId, label, options, ...rest }: SelectProps) {
+export function Select({
+  dataTestId,
+  disabled,
+  error,
+  label,
+  options,
+  helperText,
+  ...rest
+}: SelectProps) {
   return (
-    <FormControl variant="filled" style={{ minWidth: '190px' }}>
+    <FormControl
+      variant="filled"
+      style={{ minWidth: '190px' }}
+      error={error}
+      disabled={disabled}
+    >
       <InputLabel id={`${label}-select-label`}>{label}</InputLabel>
       <MUSelect
         data-testid={dataTestId}
+        disabled={disabled}
+        error={error}
         id={`${label}-select`}
         labelId={`${label}-select-label`}
         {...rest}
@@ -32,6 +49,7 @@ export function Select({ dataTestId, label, options, ...rest }: SelectProps) {
           </MenuItem>
         ))}
       </MUSelect>
+      <FormHelperText>{helperText}</FormHelperText>
     </FormControl>
   )
 }

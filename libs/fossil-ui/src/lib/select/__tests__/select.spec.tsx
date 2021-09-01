@@ -26,7 +26,6 @@ describe('<Select />', () => {
 
   const props: SelectProps = {
     dataTestId: 'select-test',
-    onChange: jest.fn(),
     options,
     label: 'Select test',
     native: true,

@@ -27,4 +27,10 @@ export const Template = (args) => {
 
 <Canvas>
   <Story name="default">{Template.bind({})}</Story>
+  <Story name="disabled" args={{ disabled: true }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="error" args={{ error: true, helperText: 'Error message' }}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
