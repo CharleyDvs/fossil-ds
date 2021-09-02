@@ -1,0 +1,28 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
+import { ColorDisplay } from './color-display'
+
+<Meta
+  title="Components/ColorDisplay"
+  component={ColorDisplay}
+  args={{
+    colorCode: '#3b06d2',
+    colorName: '$token-example-color',
+  }}
+  decorators={[
+    (Story) => (
+      <div
+        style={{
+          width: '400px',
+        }}
+      >
+        {Story()}
+      </div>
+    ),
+  ]}
+/>
+
+# ColorDisplay
+
+<Canvas>
+  <Story name="ColorDisplay">{(args) => <ColorDisplay {...args} />}</Story>
+</Canvas>
