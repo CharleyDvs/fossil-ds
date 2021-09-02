@@ -48,4 +48,15 @@ import { CodeBlock } from '@fossil-ds/fossil-ui'
   ]}
 />
 
-<CodeBlock>{'<h1>HI</h1>'}</CodeBlock>
+## Code Example
+
+<CodeBlock>{`
+import { Button } from '@fossil-ds/fossil-components'
+import { HiHome } from 'react-icons/hi'
+${''}
+export const CustomButtonWithIcon = () => {
+  const handleClick = () => console.log('click')
+${''}
+  return <Button onClick={handleClick} label="Home" leftIcon={<HiHome />} />
+}
+`}</CodeBlock>

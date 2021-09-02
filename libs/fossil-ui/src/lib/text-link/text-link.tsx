@@ -1,7 +1,9 @@
 import { makeStyles, Theme } from '@material-ui/core/styles'
+import cx from 'classnames'
 
 export interface TextLinkProps {
-  dataTestId: string
+  dataTestId?: string
+  className?: string
   children?: React.ReactNode
   icon?: JSX.Element
   onClick?: () => void
@@ -18,15 +20,16 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   icon: {
-    marginLeft: theme.spacing(0.5),
+    marginRight: theme.spacing(0.5),
   },
 }))
 
 export const TextLink = ({
+  children,
+  className,
+  dataTestId,
   icon,
   onClick,
-  children,
-  dataTestId,
   ...rest
 }: TextLinkProps): JSX.Element => {
   const styles = useStyles()
@@ -34,15 +37,15 @@ export const TextLink = ({
   return (
     <span
       role="link"
-      className={styles.link}
+      className={cx(styles.link, className)}
       data-testid={dataTestId}
       onClick={() => {
         if (onClick) onClick()
       }}
       {...rest}
     >
-      {children}
       <span className={styles.icon}>{icon}</span>
+      {children}
     </span>
   )
 }

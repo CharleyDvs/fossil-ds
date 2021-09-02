@@ -2,9 +2,9 @@ import { Suspense, lazy } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { useHistory } from 'react-router-dom'
 import { Alert } from '@material-ui/lab'
-import Button from '@material-ui/core/Button'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
-import { DocumentationSkeleton } from '@fossil-ds/fossil-ui'
+import { DocumentationSkeleton, TextLink } from '@fossil-ds/fossil-ui'
+import { HiHome } from 'react-icons/hi'
 
 interface ErrorFallbackProps {
   error: Error
@@ -13,8 +13,15 @@ interface ErrorFallbackProps {
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    margin: {
+    container: {
       marginLeft: theme.spacing(1),
+    },
+    documentationContainer: {
+      marginLeft: theme.spacing(2),
+      marginRight: theme.spacing(2),
+      '& > *': {
+        marginBottom: theme.spacing(4),
+      },
     },
   }),
 )
@@ -24,22 +31,24 @@ const ErrorFallback = ({
   resetErrorBoundary,
 }: ErrorFallbackProps): JSX.Element => {
   const history = useHistory()
-  const classes = useStyles()
+  const styles = useStyles()
 
   return (
     <div role="alert">
       <Alert severity="error">
         The component doesn't exist or there's no documentation available
-        <Button
-          size="small"
-          className={classes.margin}
+        <TextLink
+          className={styles.container}
           onClick={() => {
-            if (resetErrorBoundary) resetErrorBoundary()
+            if (resetErrorBoundary) {
+              resetErrorBoundary()
+            }
             history.push('/')
           }}
+          icon={<HiHome />}
         >
           Go back to Home
-        </Button>
+        </TextLink>
       </Alert>
     </div>
   )
@@ -50,6 +59,7 @@ interface DocumentationProps {
 }
 
 export const Documentation = ({ component }: DocumentationProps) => {
+  const styles = useStyles()
   const Component = (componentName: string) =>
     lazy(
       () => import(`!babel-loader!@mdx-js/loader!../mdx/${componentName}.mdx`),
@@ -59,7 +69,9 @@ export const Documentation = ({ component }: DocumentationProps) => {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <Suspense fallback={<DocumentationSkeleton />}>
-        <CurrentDocumentation />
+        <div className={styles.documentationContainer}>
+          <CurrentDocumentation />
+        </div>
       </Suspense>
     </ErrorBoundary>
   )
