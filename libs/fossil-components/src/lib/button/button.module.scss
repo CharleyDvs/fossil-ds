@@ -1,18 +1,18 @@
 @import 'variables';
 
 .button {
-  border: 1px solid transparent;
+  border: $button-primary-border;
   border-radius: 3rem;
   cursor: pointer;
   display: flex;
   padding: 16px;
   transition: all ease 0.5s;
-  background: $grey-100;
-  color: $grey-20;
+  background: $button-primary-background-color;
+  color: $button-primary-color;
 
   &:hover {
-    background: $blue-90;
-    border: 1px solid $blue-90;
+    background: $button-primary-background-color-hover;
+    border: $button-primary-border-hover;
   }
 }
 

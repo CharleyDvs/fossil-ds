@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 01 Sep 2021 19:37:15 GMT
+ * Generated on Wed, 01 Sep 2021 23:33:49 GMT
  */
 
 export default tokens;
@@ -130,9 +130,55 @@ declare const tokens: {
       }
     }
   },
+  "button": {
+    "primary": {
+      "background": {
+        "color": DesignToken,
+        "color-hover": DesignToken
+      },
+      "border": DesignToken,
+      "border-hover": DesignToken,
+      "color": DesignToken
+    }
+  },
   "global": {
     "background": {
       "color": DesignToken
+    },
+    "util": {
+      "color": {
+        "success": {
+          "40": DesignToken,
+          "80": DesignToken,
+          "100": DesignToken,
+          "120": DesignToken,
+          "140": DesignToken
+        },
+        "error": {
+          "20": DesignToken,
+          "40": DesignToken,
+          "80": DesignToken,
+          "100": DesignToken,
+          "120": DesignToken,
+          "140": DesignToken
+        },
+        "warning": {
+          "20": DesignToken,
+          "40": DesignToken,
+          "80": DesignToken,
+          "100": DesignToken,
+          "120": DesignToken,
+          "140": DesignToken
+        },
+        "info": {
+          "20": DesignToken,
+          "40": DesignToken,
+          "80": DesignToken,
+          "100": DesignToken,
+          "120": DesignToken,
+          "140": DesignToken
+        }
+      }
     }
   },
   "font": {

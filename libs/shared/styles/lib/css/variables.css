@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 01 Sep 2021 19:37:15 GMT
+ * Generated on Wed, 01 Sep 2021 23:33:49 GMT
  */
 
 :root {
@@ -94,7 +94,35 @@
   --brand-color-secondary-100: #03B448;
   --brand-color-secondary-120: #02903a;
   --brand-color-secondary-140: #026c2b;
+  --button-primary-background-color: #222222;
+  --button-primary-background-color-hover: #222222;
+  --button-primary-border: 2px solid #222222;
+  --button-primary-border-hover: 2px solid #d3d3d3;
+  --button-primary-color: #d3d3d3;
   --global-background-color: #a7a7a7;
+  --global-util-color-success-40: #7efdb0;
+  --global-util-color-success-80: #04f462;
+  --global-util-color-success-100: #03B448;
+  --global-util-color-success-120: #02903a;
+  --global-util-color-success-140: #026c2b;
+  --global-util-color-error-20: #ffabad;
+  --global-util-color-error-40: #ff585b;
+  --global-util-color-error-80: #b00004;
+  --global-util-color-error-100: #5c0002;
+  --global-util-color-error-120: #4a0002;
+  --global-util-color-error-140: #370001;
+  --global-util-color-warning-20: #fcefd3;
+  --global-util-color-warning-40: #f8dfa7;
+  --global-util-color-warning-80: #f1be4e;
+  --global-util-color-warning-100: #eeae22;
+  --global-util-color-warning-120: #ca9010;
+  --global-util-color-warning-140: #986c0c;
+  --global-util-color-info-20: #fcefd3;
+  --global-util-color-info-40: #f8dfa7;
+  --global-util-color-info-80: #f1be4e;
+  --global-util-color-info-100: #eeae22;
+  --global-util-color-info-120: #ca9010;
+  --global-util-color-info-140: #986c0c;
   --font-size-8: 0.5;
   --font-size-10: 0.625;
   --font-size-11: 0.687;

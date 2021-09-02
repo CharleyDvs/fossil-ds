@@ -1,0 +1,21 @@
+{
+  "button": {
+    "primary": {
+      "background": {
+        "color": {
+          "value": "{grey.100.value}"
+        },
+        "color-hover": {
+          "value": "{grey.100.value}"
+        }
+      },
+      "border": {
+        "value": "2px solid {grey.100.value}"
+      },
+      "border-hover": {
+        "value": "2px solid {grey.20.value}"
+      },
+      "color": { "value": "{grey.20.value}" }
+    }
+  }
+}
