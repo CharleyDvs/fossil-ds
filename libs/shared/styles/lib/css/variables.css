@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 01 Sep 2021 23:33:49 GMT
+ * Generated on Thu, 02 Sep 2021 18:25:17 GMT
  */
 
 :root {
@@ -95,10 +95,22 @@
   --brand-color-secondary-120: #02903a;
   --brand-color-secondary-140: #026c2b;
   --button-primary-background-color: #222222;
-  --button-primary-background-color-hover: #222222;
+  --button-primary-background-color-success: #03B448;
+  --button-primary-background-color-error: #5c0002;
   --button-primary-border: 2px solid #222222;
+  --button-primary-border-radius: 48px;
   --button-primary-border-hover: 2px solid #d3d3d3;
+  --button-primary-border-success: 2px solid #03B448;
+  --button-primary-border-success-hover: 2px solid #d3d3d3;
+  --button-primary-border-error: 2px solid #5c0002;
   --button-primary-color: #d3d3d3;
+  --button-primary-height: 48px;
+  --button-primary-padding: 16px;
+  --button-primary-shadow: 5px 5px 15px #222222;
+  --button-secondary-background-color: #d3d3d3;
+  --button-secondary-border: 2px solid #d3d3d3;
+  --button-secondary-border-hover: 2px solid #222222;
+  --button-secondary-color: #222222;
   --global-background-color: #a7a7a7;
   --global-util-color-success-40: #7efdb0;
   --global-util-color-success-80: #04f462;
@@ -136,20 +148,20 @@
   --font-size-24: 1.5;
   --font-size-25: 1.6;
   --font-size-28: 1.8;
-  --spacing-4: 4px;
-  --spacing-8: 8px;
-  --spacing-12: 12px;
-  --spacing-16: 16px;
-  --spacing-20: 20px;
-  --spacing-24: 24px;
-  --spacing-28: 28px;
-  --spacing-32: 32px;
-  --spacing-36: 36px;
-  --spacing-40: 40px;
-  --spacing-44: 44px;
-  --spacing-48: 48px;
-  --spacing-52: 52px;
-  --spacing-56: 56px;
-  --spacing-60: 60px;
-  --spacing-64: 64px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-11: 44px;
+  --spacing-12: 48px;
+  --spacing-13: 52px;
+  --spacing-14: 56px;
+  --spacing-15: 60px;
+  --spacing-16: 64px;
 }

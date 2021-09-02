@@ -1,38 +1,39 @@
 @import 'variables';
+@import 'animations';
 
 .button {
+  background: $button-primary-background-color;
   border: $button-primary-border;
-  border-radius: 3rem;
+  border-radius: $button-primary-border-radius;
+  color: $button-primary-color;
   cursor: pointer;
   display: flex;
-  padding: 16px;
+  height: $button-primary-height;
+  padding: $button-primary-padding;
   transition: all ease 0.5s;
-  background: $button-primary-background-color;
-  color: $button-primary-color;
 
   &:hover {
-    background: $button-primary-background-color-hover;
     border: $button-primary-border-hover;
+    box-shadow: $button-primary-shadow;
+  }
+}
+
+.secondary {
+  background: $button-secondary-background-color;
+  border: $button-secondary-border;
+  color: $button-secondary-color;
+
+  &:hover {
+    border: $button-secondary-border-hover;
   }
 }
 
 .leftIcon {
-  margin-right: 8px;
+  margin-right: $spacing-2;
 }
 
 .rightIcon {
-  margin-left: 8px;
-}
-
-.outlined {
-  border: 1px solid $grey-20;
-  background: none;
-  color: $grey-20;
-
-  &:hover {
-    background: $blue-90;
-    border: 1px solid $blue-90;
-  }
+  margin-left: $spacing-2;
 }
 
 .disabled {
@@ -41,15 +42,30 @@
 }
 
 .loading {
-  color: $grey-20;
+  pointer-events: none;
+}
+
+.loadingIcon {
+  color: inherit;
   height: 1rem;
-  margin: 0 1rem;
+  margin: 0 $spacing-4;
 }
 
 .success {
-  background-color: $green-100;
+  background-color: $button-primary-background-color-success;
+  border: $button-primary-border-success;
+  color: $button-secondary-color;
+
+  &:hover {
+    background-color: $button-primary-background-color-success;
+    border: $button-primary-border-success-hover;
+  }
 }
 
 .error {
-  background-color: $red-80;
+  animation: buttonErrorAnim 0.5s;
+  background-color: $button-primary-background-color-error;
+  border: $button-primary-border-error;
+  color: $button-primary-color;
+  pointer-events: none;
 }

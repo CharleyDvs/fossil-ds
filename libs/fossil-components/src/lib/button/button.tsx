@@ -1,6 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import { CircularProgress } from '@material-ui/core'
+import { HiCheck, HiX } from 'react-icons/hi'
 import cl from './button.module.scss'
 
 type ButtonStatus = 'success' | 'error' | ''
@@ -11,7 +12,7 @@ export interface ButtonProps
   label?: string
   loading?: boolean
   rightIcon?: React.ReactNode
-  outlined?: boolean
+  secondary?: boolean
 }
 
 export function Button({
@@ -19,28 +20,52 @@ export function Button({
   label,
   leftIcon,
   loading,
-  outlined,
+  secondary,
   rightIcon,
   status,
   ...rest
 }: ButtonProps) {
+  const isError = status === 'error'
+  const isSuccess = status === 'success'
   const buttonClasses = cx(
     cl.button,
-    outlined && cl.outlined,
+    secondary && cl.secondary,
     disabled && cl.disabled,
+    loading && cl.loading,
     status === 'success' && cl.success,
-    status === 'error' && cl.error,
+    isError && cl.error,
   )
+  const ICON_SIZE = 16
 
   return (
     <button className={buttonClasses} {...rest}>
       {loading ? (
-        <CircularProgress className={cl.loading} size={12} />
+        <CircularProgress className={cl.loadingIcon} size={ICON_SIZE} />
       ) : (
         <>
-          {leftIcon && <div className={cl.leftIcon}>{leftIcon}</div>}
+          {leftIcon && (
+            <div className={cl.leftIcon}>
+              {isSuccess ? (
+                <HiCheck size={ICON_SIZE} />
+              ) : isError ? (
+                <HiX size={ICON_SIZE} />
+              ) : (
+                leftIcon
+              )}
+            </div>
+          )}
           {label}
-          {rightIcon && <div className={cl.rightIcon}>{rightIcon}</div>}
+          {rightIcon && (
+            <div className={cl.rightIcon}>
+              {isSuccess ? (
+                <HiCheck size={ICON_SIZE} />
+              ) : isError ? (
+                <HiX size={ICON_SIZE} />
+              ) : (
+                rightIcon
+              )}
+            </div>
+          )}
         </>
       )}
     </button>

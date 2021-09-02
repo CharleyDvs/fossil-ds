@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 01 Sep 2021 23:33:49 GMT
+ * Generated on Thu, 02 Sep 2021 18:25:17 GMT
  */
 
 export default tokens;
@@ -134,7 +134,23 @@ declare const tokens: {
     "primary": {
       "background": {
         "color": DesignToken,
-        "color-hover": DesignToken
+        "color-success": DesignToken,
+        "color-error": DesignToken
+      },
+      "border": DesignToken,
+      "border-radius": DesignToken,
+      "border-hover": DesignToken,
+      "border-success": DesignToken,
+      "border-success-hover": DesignToken,
+      "border-error": DesignToken,
+      "color": DesignToken,
+      "height": DesignToken,
+      "padding": DesignToken,
+      "shadow": DesignToken
+    },
+    "secondary": {
+      "background": {
+        "color": DesignToken
       },
       "border": DesignToken,
       "border-hover": DesignToken,
@@ -199,21 +215,21 @@ declare const tokens: {
     }
   },
   "spacing": {
+    "1": DesignToken,
+    "2": DesignToken,
+    "3": DesignToken,
     "4": DesignToken,
+    "5": DesignToken,
+    "6": DesignToken,
+    "7": DesignToken,
     "8": DesignToken,
+    "9": DesignToken,
+    "10": DesignToken,
+    "11": DesignToken,
     "12": DesignToken,
-    "16": DesignToken,
-    "20": DesignToken,
-    "24": DesignToken,
-    "28": DesignToken,
-    "32": DesignToken,
-    "36": DesignToken,
-    "40": DesignToken,
-    "44": DesignToken,
-    "48": DesignToken,
-    "52": DesignToken,
-    "56": DesignToken,
-    "60": DesignToken,
-    "64": DesignToken
+    "13": DesignToken,
+    "14": DesignToken,
+    "15": DesignToken,
+    "16": DesignToken
   }
 }

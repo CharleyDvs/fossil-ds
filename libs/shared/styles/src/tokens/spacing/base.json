@@ -1,20 +1,20 @@
 {
   "spacing": {
-    "4": { "value": "4px" },
-    "8": { "value": "8px" },
-    "12": { "value": "12px" },
-    "16": { "value": "16px" },
-    "20": { "value": "20px" },
-    "24": { "value": "24px" },
-    "28": { "value": "28px" },
-    "32": { "value": "32px" },
-    "36": { "value": "36px" },
-    "40": { "value": "40px" },
-    "44": { "value": "44px" },
-    "48": { "value": "48px" },
-    "52": { "value": "52px" },
-    "56": { "value": "56px" },
-    "60": { "value": "60px" },
-    "64": { "value": "64px" }
+    "1": { "value": "4px" },
+    "2": { "value": "8px" },
+    "3": { "value": "12px" },
+    "4": { "value": "16px" },
+    "5": { "value": "20px" },
+    "6": { "value": "24px" },
+    "7": { "value": "28px" },
+    "8": { "value": "32px" },
+    "9": { "value": "36px" },
+    "10": { "value": "40px" },
+    "11": { "value": "44px" },
+    "12": { "value": "48px" },
+    "13": { "value": "52px" },
+    "14": { "value": "56px" },
+    "15": { "value": "60px" },
+    "16": { "value": "64px" }
   }
 }

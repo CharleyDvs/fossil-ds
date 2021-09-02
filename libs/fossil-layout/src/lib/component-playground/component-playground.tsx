@@ -19,7 +19,7 @@ type ComponentPlaygroundState = { [k: string]: unknown }
 const useStyles = makeStyles({
   playground: {
     background: tokens.grey[90].value,
-    borderRadius: tokens.spacing[16].value,
+    borderRadius: tokens.spacing[4].value,
     boxShadow: '0px 0px 15px #2a2a2a',
     color: '#dfdfdf',
     display: 'flex',
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     margin: '0 auto',
     maxWidth: '900px',
     height: '500px',
-    padding: tokens.spacing[16].value,
+    padding: tokens.spacing[4].value,
     position: 'relative',
   },
   controls: {
@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     display: 'flex',
     flexFlow: 'column wrap',
     overflowY: 'auto',
-    padding: tokens.spacing[16].value,
+    padding: tokens.spacing[4].value,
     minWidth: '280px',
   },
   componentContainer: {
@@ -59,11 +59,11 @@ const useStyles = makeStyles({
   },
   playgroundTitle: {
     position: 'absolute',
-    top: tokens.spacing[16].value,
-    left: tokens.spacing[16].value,
+    top: tokens.spacing[4].value,
+    left: tokens.spacing[4].value,
   },
   description: {
-    bottom: tokens.spacing[16].value,
+    bottom: tokens.spacing[4].value,
     left: '50%',
     position: 'absolute',
     transform: 'translateX(-50%)',

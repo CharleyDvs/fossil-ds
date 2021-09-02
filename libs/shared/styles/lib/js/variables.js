@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 01 Sep 2021 23:33:49 GMT
+ * Generated on Thu, 02 Sep 2021 18:25:17 GMT
  */
 
 module.exports = {
@@ -1614,25 +1614,46 @@ module.exports = {
             "color"
           ]
         },
-        "color-hover": {
-          "value": "#222222",
+        "color-success": {
+          "value": "#03B448",
           "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
           "isSource": true,
           "original": {
-            "value": "{grey.100.value}"
+            "value": "{global.util.color.success.100.value}"
           },
-          "name": "ButtonPrimaryBackgroundColorHover",
+          "name": "ButtonPrimaryBackgroundColorSuccess",
           "attributes": {
             "category": "button",
             "type": "primary",
             "item": "background",
-            "subitem": "color-hover"
+            "subitem": "color-success"
           },
           "path": [
             "button",
             "primary",
             "background",
-            "color-hover"
+            "color-success"
+          ]
+        },
+        "color-error": {
+          "value": "#5c0002",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
+          "isSource": true,
+          "original": {
+            "value": "{global.util.color.error.100.value}"
+          },
+          "name": "ButtonPrimaryBackgroundColorError",
+          "attributes": {
+            "category": "button",
+            "type": "primary",
+            "item": "background",
+            "subitem": "color-error"
+          },
+          "path": [
+            "button",
+            "primary",
+            "background",
+            "color-error"
           ]
         }
       },
@@ -1655,6 +1676,25 @@ module.exports = {
           "border"
         ]
       },
+      "border-radius": {
+        "value": "48px",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
+        "isSource": true,
+        "original": {
+          "value": "48px"
+        },
+        "name": "ButtonPrimaryBorderRadius",
+        "attributes": {
+          "category": "button",
+          "type": "primary",
+          "item": "border-radius"
+        },
+        "path": [
+          "button",
+          "primary",
+          "border-radius"
+        ]
+      },
       "border-hover": {
         "value": "2px solid #d3d3d3",
         "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
@@ -1674,6 +1714,63 @@ module.exports = {
           "border-hover"
         ]
       },
+      "border-success": {
+        "value": "2px solid #03B448",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
+        "isSource": true,
+        "original": {
+          "value": "2px solid {global.util.color.success.100.value}"
+        },
+        "name": "ButtonPrimaryBorderSuccess",
+        "attributes": {
+          "category": "button",
+          "type": "primary",
+          "item": "border-success"
+        },
+        "path": [
+          "button",
+          "primary",
+          "border-success"
+        ]
+      },
+      "border-success-hover": {
+        "value": "2px solid #d3d3d3",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
+        "isSource": true,
+        "original": {
+          "value": "2px solid {grey.20.value}"
+        },
+        "name": "ButtonPrimaryBorderSuccessHover",
+        "attributes": {
+          "category": "button",
+          "type": "primary",
+          "item": "border-success-hover"
+        },
+        "path": [
+          "button",
+          "primary",
+          "border-success-hover"
+        ]
+      },
+      "border-error": {
+        "value": "2px solid #5c0002",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
+        "isSource": true,
+        "original": {
+          "value": "2px solid {global.util.color.error.100.value}"
+        },
+        "name": "ButtonPrimaryBorderError",
+        "attributes": {
+          "category": "button",
+          "type": "primary",
+          "item": "border-error"
+        },
+        "path": [
+          "button",
+          "primary",
+          "border-error"
+        ]
+      },
       "color": {
         "value": "#d3d3d3",
         "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
@@ -1690,6 +1787,145 @@ module.exports = {
         "path": [
           "button",
           "primary",
+          "color"
+        ]
+      },
+      "height": {
+        "value": "48px",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
+        "isSource": true,
+        "original": {
+          "value": "48px"
+        },
+        "name": "ButtonPrimaryHeight",
+        "attributes": {
+          "category": "button",
+          "type": "primary",
+          "item": "height"
+        },
+        "path": [
+          "button",
+          "primary",
+          "height"
+        ]
+      },
+      "padding": {
+        "value": "16px",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
+        "isSource": true,
+        "original": {
+          "value": "{spacing.4.value}"
+        },
+        "name": "ButtonPrimaryPadding",
+        "attributes": {
+          "category": "button",
+          "type": "primary",
+          "item": "padding"
+        },
+        "path": [
+          "button",
+          "primary",
+          "padding"
+        ]
+      },
+      "shadow": {
+        "value": "5px 5px 15px #222222",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
+        "isSource": true,
+        "original": {
+          "value": "5px 5px 15px {grey.100.value}"
+        },
+        "name": "ButtonPrimaryShadow",
+        "attributes": {
+          "category": "button",
+          "type": "primary",
+          "item": "shadow"
+        },
+        "path": [
+          "button",
+          "primary",
+          "shadow"
+        ]
+      }
+    },
+    "secondary": {
+      "background": {
+        "color": {
+          "value": "#d3d3d3",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
+          "isSource": true,
+          "original": {
+            "value": "{grey.20.value}"
+          },
+          "name": "ButtonSecondaryBackgroundColor",
+          "attributes": {
+            "category": "button",
+            "type": "secondary",
+            "item": "background",
+            "subitem": "color"
+          },
+          "path": [
+            "button",
+            "secondary",
+            "background",
+            "color"
+          ]
+        }
+      },
+      "border": {
+        "value": "2px solid #d3d3d3",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
+        "isSource": true,
+        "original": {
+          "value": "2px solid {grey.20.value}"
+        },
+        "name": "ButtonSecondaryBorder",
+        "attributes": {
+          "category": "button",
+          "type": "secondary",
+          "item": "border"
+        },
+        "path": [
+          "button",
+          "secondary",
+          "border"
+        ]
+      },
+      "border-hover": {
+        "value": "2px solid #222222",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
+        "isSource": true,
+        "original": {
+          "value": "2px solid {grey.100.value}"
+        },
+        "name": "ButtonSecondaryBorderHover",
+        "attributes": {
+          "category": "button",
+          "type": "secondary",
+          "item": "border-hover"
+        },
+        "path": [
+          "button",
+          "secondary",
+          "border-hover"
+        ]
+      },
+      "color": {
+        "value": "#222222",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
+        "isSource": true,
+        "original": {
+          "value": "{grey.100.value}"
+        },
+        "name": "ButtonSecondaryColor",
+        "attributes": {
+          "category": "button",
+          "type": "secondary",
+          "item": "color"
+        },
+        "path": [
+          "button",
+          "secondary",
           "color"
         ]
       }
@@ -2511,12 +2747,63 @@ module.exports = {
     }
   },
   "spacing": {
-    "4": {
+    "1": {
       "value": "4px",
       "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
         "value": "4px"
+      },
+      "name": "Spacing1",
+      "attributes": {
+        "category": "spacing",
+        "type": "1"
+      },
+      "path": [
+        "spacing",
+        "1"
+      ]
+    },
+    "2": {
+      "value": "8px",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
+      "isSource": true,
+      "original": {
+        "value": "8px"
+      },
+      "name": "Spacing2",
+      "attributes": {
+        "category": "spacing",
+        "type": "2"
+      },
+      "path": [
+        "spacing",
+        "2"
+      ]
+    },
+    "3": {
+      "value": "12px",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
+      "isSource": true,
+      "original": {
+        "value": "12px"
+      },
+      "name": "Spacing3",
+      "attributes": {
+        "category": "spacing",
+        "type": "3"
+      },
+      "path": [
+        "spacing",
+        "3"
+      ]
+    },
+    "4": {
+      "value": "16px",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
+      "isSource": true,
+      "original": {
+        "value": "16px"
       },
       "name": "Spacing4",
       "attributes": {
@@ -2528,12 +2815,63 @@ module.exports = {
         "4"
       ]
     },
-    "8": {
-      "value": "8px",
+    "5": {
+      "value": "20px",
       "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
-        "value": "8px"
+        "value": "20px"
+      },
+      "name": "Spacing5",
+      "attributes": {
+        "category": "spacing",
+        "type": "5"
+      },
+      "path": [
+        "spacing",
+        "5"
+      ]
+    },
+    "6": {
+      "value": "24px",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
+      "isSource": true,
+      "original": {
+        "value": "24px"
+      },
+      "name": "Spacing6",
+      "attributes": {
+        "category": "spacing",
+        "type": "6"
+      },
+      "path": [
+        "spacing",
+        "6"
+      ]
+    },
+    "7": {
+      "value": "28px",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
+      "isSource": true,
+      "original": {
+        "value": "28px"
+      },
+      "name": "Spacing7",
+      "attributes": {
+        "category": "spacing",
+        "type": "7"
+      },
+      "path": [
+        "spacing",
+        "7"
+      ]
+    },
+    "8": {
+      "value": "32px",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
+      "isSource": true,
+      "original": {
+        "value": "32px"
       },
       "name": "Spacing8",
       "attributes": {
@@ -2545,12 +2883,63 @@ module.exports = {
         "8"
       ]
     },
-    "12": {
-      "value": "12px",
+    "9": {
+      "value": "36px",
       "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
-        "value": "12px"
+        "value": "36px"
+      },
+      "name": "Spacing9",
+      "attributes": {
+        "category": "spacing",
+        "type": "9"
+      },
+      "path": [
+        "spacing",
+        "9"
+      ]
+    },
+    "10": {
+      "value": "40px",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
+      "isSource": true,
+      "original": {
+        "value": "40px"
+      },
+      "name": "Spacing10",
+      "attributes": {
+        "category": "spacing",
+        "type": "10"
+      },
+      "path": [
+        "spacing",
+        "10"
+      ]
+    },
+    "11": {
+      "value": "44px",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
+      "isSource": true,
+      "original": {
+        "value": "44px"
+      },
+      "name": "Spacing11",
+      "attributes": {
+        "category": "spacing",
+        "type": "11"
+      },
+      "path": [
+        "spacing",
+        "11"
+      ]
+    },
+    "12": {
+      "value": "48px",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
+      "isSource": true,
+      "original": {
+        "value": "48px"
       },
       "name": "Spacing12",
       "attributes": {
@@ -2562,12 +2951,63 @@ module.exports = {
         "12"
       ]
     },
-    "16": {
-      "value": "16px",
+    "13": {
+      "value": "52px",
       "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
       "isSource": true,
       "original": {
-        "value": "16px"
+        "value": "52px"
+      },
+      "name": "Spacing13",
+      "attributes": {
+        "category": "spacing",
+        "type": "13"
+      },
+      "path": [
+        "spacing",
+        "13"
+      ]
+    },
+    "14": {
+      "value": "56px",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
+      "isSource": true,
+      "original": {
+        "value": "56px"
+      },
+      "name": "Spacing14",
+      "attributes": {
+        "category": "spacing",
+        "type": "14"
+      },
+      "path": [
+        "spacing",
+        "14"
+      ]
+    },
+    "15": {
+      "value": "60px",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
+      "isSource": true,
+      "original": {
+        "value": "60px"
+      },
+      "name": "Spacing15",
+      "attributes": {
+        "category": "spacing",
+        "type": "15"
+      },
+      "path": [
+        "spacing",
+        "15"
+      ]
+    },
+    "16": {
+      "value": "64px",
+      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
+      "isSource": true,
+      "original": {
+        "value": "64px"
       },
       "name": "Spacing16",
       "attributes": {
@@ -2577,210 +3017,6 @@ module.exports = {
       "path": [
         "spacing",
         "16"
-      ]
-    },
-    "20": {
-      "value": "20px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
-      "isSource": true,
-      "original": {
-        "value": "20px"
-      },
-      "name": "Spacing20",
-      "attributes": {
-        "category": "spacing",
-        "type": "20"
-      },
-      "path": [
-        "spacing",
-        "20"
-      ]
-    },
-    "24": {
-      "value": "24px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
-      "isSource": true,
-      "original": {
-        "value": "24px"
-      },
-      "name": "Spacing24",
-      "attributes": {
-        "category": "spacing",
-        "type": "24"
-      },
-      "path": [
-        "spacing",
-        "24"
-      ]
-    },
-    "28": {
-      "value": "28px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
-      "isSource": true,
-      "original": {
-        "value": "28px"
-      },
-      "name": "Spacing28",
-      "attributes": {
-        "category": "spacing",
-        "type": "28"
-      },
-      "path": [
-        "spacing",
-        "28"
-      ]
-    },
-    "32": {
-      "value": "32px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
-      "isSource": true,
-      "original": {
-        "value": "32px"
-      },
-      "name": "Spacing32",
-      "attributes": {
-        "category": "spacing",
-        "type": "32"
-      },
-      "path": [
-        "spacing",
-        "32"
-      ]
-    },
-    "36": {
-      "value": "36px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
-      "isSource": true,
-      "original": {
-        "value": "36px"
-      },
-      "name": "Spacing36",
-      "attributes": {
-        "category": "spacing",
-        "type": "36"
-      },
-      "path": [
-        "spacing",
-        "36"
-      ]
-    },
-    "40": {
-      "value": "40px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
-      "isSource": true,
-      "original": {
-        "value": "40px"
-      },
-      "name": "Spacing40",
-      "attributes": {
-        "category": "spacing",
-        "type": "40"
-      },
-      "path": [
-        "spacing",
-        "40"
-      ]
-    },
-    "44": {
-      "value": "44px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
-      "isSource": true,
-      "original": {
-        "value": "44px"
-      },
-      "name": "Spacing44",
-      "attributes": {
-        "category": "spacing",
-        "type": "44"
-      },
-      "path": [
-        "spacing",
-        "44"
-      ]
-    },
-    "48": {
-      "value": "48px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
-      "isSource": true,
-      "original": {
-        "value": "48px"
-      },
-      "name": "Spacing48",
-      "attributes": {
-        "category": "spacing",
-        "type": "48"
-      },
-      "path": [
-        "spacing",
-        "48"
-      ]
-    },
-    "52": {
-      "value": "52px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
-      "isSource": true,
-      "original": {
-        "value": "52px"
-      },
-      "name": "Spacing52",
-      "attributes": {
-        "category": "spacing",
-        "type": "52"
-      },
-      "path": [
-        "spacing",
-        "52"
-      ]
-    },
-    "56": {
-      "value": "56px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
-      "isSource": true,
-      "original": {
-        "value": "56px"
-      },
-      "name": "Spacing56",
-      "attributes": {
-        "category": "spacing",
-        "type": "56"
-      },
-      "path": [
-        "spacing",
-        "56"
-      ]
-    },
-    "60": {
-      "value": "60px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
-      "isSource": true,
-      "original": {
-        "value": "60px"
-      },
-      "name": "Spacing60",
-      "attributes": {
-        "category": "spacing",
-        "type": "60"
-      },
-      "path": [
-        "spacing",
-        "60"
-      ]
-    },
-    "64": {
-      "value": "64px",
-      "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/spacing/base.json",
-      "isSource": true,
-      "original": {
-        "value": "64px"
-      },
-      "name": "Spacing64",
-      "attributes": {
-        "category": "spacing",
-        "type": "64"
-      },
-      "path": [
-        "spacing",
-        "64"
       ]
     }
   }
