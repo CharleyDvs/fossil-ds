@@ -1,4 +1,4 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import { ColorDisplay } from '../color-display/color-display'
 
 interface ColorData {
@@ -11,14 +11,12 @@ export interface ColorPaletteDisplayProps {
   dataTestId?: string
 }
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    container: {
-      minWidth: '400px',
-      border: 'solid 1px #7a7a7a',
-    },
-  }),
-)
+const useStyles = makeStyles({
+  container: {
+    minWidth: '400px',
+    border: 'solid 1px #7a7a7a',
+  },
+})
 
 export const ColorPaletteDisplay = ({
   colorList,
