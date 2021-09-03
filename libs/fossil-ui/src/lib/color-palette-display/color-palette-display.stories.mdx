@@ -1,0 +1,39 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs'
+import { ColorPaletteDisplay } from './color-palette-display'
+
+<Meta
+  title="Components/ColorPaletteDisplay"
+  component={ColorPaletteDisplay}
+  args={{
+    colorList: [
+      {
+        colorName: '$token-example-color-1',
+        colorCode: '#07a2ff',
+      },
+      {
+        colorName: '$token-example-color-2',
+        colorCode: '#0070b3',
+      },
+      {
+        colorName: '$token-example-color-3',
+        colorCode: '#003c60',
+      },
+      {
+        colorName: '$token-example-color-4',
+        colorCode: '#00304d',
+      },
+      {
+        colorName: '$token-example-color-4',
+        colorCode: '#00243a',
+      },
+    ],
+  }}
+/>
+
+# ColorPaletteDisplay
+
+<Canvas>
+  <Story name="ColorPaletteDisplay">
+    {(args) => <ColorPaletteDisplay {...args} />}
+  </Story>
+</Canvas>
