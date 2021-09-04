@@ -17,8 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginLeft: theme.spacing(1),
     },
     documentationContainer: {
-      marginLeft: theme.spacing(2),
-      marginRight: theme.spacing(2),
+      padding: theme.spacing(6),
       '& > *': {
         marginBottom: theme.spacing(4),
       },

@@ -13,7 +13,6 @@ export const CodeBlock = ({ children }: CodeBlockProps): JSX.Element => {
           style={{
             borderRadius: '16px',
             margin: '32px auto',
-            maxWidth: '80%',
             padding: '20px',
             ...style,
           }}

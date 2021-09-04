@@ -24,8 +24,6 @@ const useStyles = makeStyles({
     color: '#dfdfdf',
     display: 'flex',
     justifyContent: 'space-between',
-    margin: '0 auto',
-    maxWidth: '900px',
     height: '500px',
     padding: tokens.spacing[4].value,
     position: 'relative',
