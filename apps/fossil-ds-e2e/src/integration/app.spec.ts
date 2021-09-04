@@ -1,13 +1,12 @@
-import { getGreeting } from '../support/app.po'
-
 describe('fossil-ds', () => {
   beforeEach(() => cy.visit('/'))
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword')
+  it('should display the project title', () => {
+    cy.contains('h1', 'Fossil DS').should('be.visible')
+  })
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to fossil-ds!')
+  it('should open the side menu if the menu icon is clicked', () => {
+    cy.get('[aria-label="open drawer"]').click()
+    cy.get('[role="button"]').contains('Home').should('be.visible')
   })
 })
