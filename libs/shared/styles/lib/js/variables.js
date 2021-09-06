@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 02 Sep 2021 18:25:17 GMT
+ * Generated on Mon, 06 Sep 2021 17:28:38 GMT
  */
 
 module.exports = {
@@ -1829,11 +1829,11 @@ module.exports = {
         ]
       },
       "shadow": {
-        "value": "5px 5px 15px #222222",
+        "value": "2px 2px 4px #7a7a7a",
         "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/components/button.json",
         "isSource": true,
         "original": {
-          "value": "5px 5px 15px {grey.100.value}"
+          "value": "2px 2px 4px {grey.60.value}"
         },
         "name": "ButtonPrimaryShadow",
         "attributes": {

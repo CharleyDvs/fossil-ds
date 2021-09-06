@@ -18,7 +18,7 @@ type ComponentPlaygroundState = { [k: string]: unknown }
 
 const useStyles = makeStyles({
   playground: {
-    background: tokens.grey[90].value,
+    background: tokens.grey[80].value,
     borderRadius: tokens.spacing[4].value,
     boxShadow: '0px 0px 15px #2a2a2a',
     color: '#dfdfdf',

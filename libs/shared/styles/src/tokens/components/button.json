@@ -38,7 +38,7 @@
         "value": "{spacing.4.value}"
       },
       "shadow": {
-        "value": "5px 5px 15px {grey.100.value}"
+        "value": "2px 2px 4px {grey.60.value}"
       }
     },
     "secondary": {
