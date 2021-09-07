@@ -9,7 +9,7 @@ import { tokens } from '@fossil-ds/shared/styles'
 
 interface CodeBlockProps {
   children: string
-  component?: React.ReactNode
+  component?: React.ReactNode | React.ReactNode[]
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       justifyContent: 'center',
       minHeight: '300px',
+      '& > *': {
+        margin: '0 8px',
+      },
     },
     controlsContainer: {
       position: 'absolute',
@@ -97,7 +100,7 @@ export const CodeBlock = ({
           </Highlight>
           <div className={cx(styles.clipboardBtn, styles.white, styles.icon)}>
             <CopyToClipboard text={children} onCopy={handleCopy}>
-              <Tooltip title={clipboardText} placement="top">
+              <Tooltip title={clipboardText} placement="top" arrow>
                 <IconButton className={cx(styles.clipboardBtn, styles.white)}>
                   <HiClipboard />
                 </IconButton>
@@ -106,10 +109,16 @@ export const CodeBlock = ({
           </div>
         </>
       ) : (
-        <div className={styles.previewContainer}>{component}</div>
+        <div className={styles.previewContainer}>
+          {Array.isArray(component)
+            ? component.map((element, idx) => (
+                <div key={`component-example-${idx}`}>{element}</div>
+              ))
+            : component}
+        </div>
       )}
       <div className={styles.controlsContainer}>
-        <Tooltip title="show component" placement="top">
+        <Tooltip title="show component" placement="top" arrow>
           <IconButton
             className={cx(
               showCode ? [styles.notSelected, styles.white] : styles.black,
@@ -121,7 +130,7 @@ export const CodeBlock = ({
             <HiTemplate />
           </IconButton>
         </Tooltip>
-        <Tooltip title="show code snippet" placement="top">
+        <Tooltip title="show code snippet" placement="top" arrow>
           <IconButton
             className={cx(
               showCode ? styles.white : [styles.black, styles.notSelected],
