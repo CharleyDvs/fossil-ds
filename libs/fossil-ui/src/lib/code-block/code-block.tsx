@@ -35,12 +35,12 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     icon: {
       cursor: 'pointer',
-      margin: '0 8px',
+      marginLeft: '0 8px',
     },
     clipboardBtn: {
       position: 'absolute',
       bottom: theme.spacing(1),
-      left: '0',
+      left: theme.spacing(1),
       '&:hover': {
         opacity: '1 !important',
       },
