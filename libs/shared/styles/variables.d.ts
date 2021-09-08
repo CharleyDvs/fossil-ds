@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 06 Sep 2021 17:28:38 GMT
+ * Generated on Tue, 07 Sep 2021 21:08:32 GMT
  */
 
 export default tokens;
@@ -157,44 +157,44 @@ declare const tokens: {
       "color": DesignToken
     }
   },
-  "global": {
+  "util": {
+    "color": {
+      "success": {
+        "40": DesignToken,
+        "80": DesignToken,
+        "100": DesignToken,
+        "120": DesignToken,
+        "140": DesignToken
+      },
+      "error": {
+        "20": DesignToken,
+        "40": DesignToken,
+        "80": DesignToken,
+        "100": DesignToken,
+        "120": DesignToken,
+        "140": DesignToken
+      },
+      "warning": {
+        "20": DesignToken,
+        "40": DesignToken,
+        "80": DesignToken,
+        "100": DesignToken,
+        "120": DesignToken,
+        "140": DesignToken
+      },
+      "info": {
+        "20": DesignToken,
+        "40": DesignToken,
+        "80": DesignToken,
+        "100": DesignToken,
+        "120": DesignToken,
+        "140": DesignToken
+      }
+    }
+  },
+  "main": {
     "background": {
       "color": DesignToken
-    },
-    "util": {
-      "color": {
-        "success": {
-          "40": DesignToken,
-          "80": DesignToken,
-          "100": DesignToken,
-          "120": DesignToken,
-          "140": DesignToken
-        },
-        "error": {
-          "20": DesignToken,
-          "40": DesignToken,
-          "80": DesignToken,
-          "100": DesignToken,
-          "120": DesignToken,
-          "140": DesignToken
-        },
-        "warning": {
-          "20": DesignToken,
-          "40": DesignToken,
-          "80": DesignToken,
-          "100": DesignToken,
-          "120": DesignToken,
-          "140": DesignToken
-        },
-        "info": {
-          "20": DesignToken,
-          "40": DesignToken,
-          "80": DesignToken,
-          "100": DesignToken,
-          "120": DesignToken,
-          "140": DesignToken
-        }
-      }
     }
   },
   "font": {
