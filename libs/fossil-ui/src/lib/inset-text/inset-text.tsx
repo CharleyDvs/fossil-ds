@@ -13,6 +13,7 @@ type TextType = 'warning' | 'info' | 'error' | 'success'
 export interface InsetTextProps {
   textType: TextType
   children: React.ReactNode
+  dataTestId?: string
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 )
 
-export function InsetText({ textType, children }: InsetTextProps) {
+export function InsetText({ textType, children, dataTestId }: InsetTextProps) {
   const styles = useStyles()
   const icon =
     textType === 'warning' ? (
@@ -71,6 +72,7 @@ export function InsetText({ textType, children }: InsetTextProps) {
         textType === 'success' && styles.success,
         textType === 'info' && styles.info,
       )}
+      data-testid={dataTestId}
     >
       <span className={styles.icon}>{icon}</span>
       {children}

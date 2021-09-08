@@ -1,0 +1,46 @@
+import { useState } from 'react'
+import { Meta, Canvas, Story } from '@storybook/addon-docs'
+import { InsetText } from './inset-text'
+
+<Meta
+  title="Components/InsetText"
+  component={InsetText}
+  args={{ children: 'This is an example text' }}
+/>
+
+# InsetText
+
+<Canvas>
+  <Story
+    name="success"
+    args={{
+      textType: 'success',
+    }}
+  >
+    {(args) => <InsetText {...args} />}
+  </Story>
+  <Story
+    name="error"
+    args={{
+      textType: 'error',
+    }}
+  >
+    {(args) => <InsetText {...args} />}
+  </Story>
+  <Story
+    name="warning"
+    args={{
+      textType: 'warning',
+    }}
+  >
+    {(args) => <InsetText {...args} />}
+  </Story>
+  <Story
+    name="info"
+    args={{
+      textType: 'info',
+    }}
+  >
+    {(args) => <InsetText {...args} />}
+  </Story>
+</Canvas>
