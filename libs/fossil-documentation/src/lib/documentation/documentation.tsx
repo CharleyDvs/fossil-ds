@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { Alert } from '@material-ui/lab'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import { DocumentationSkeleton, TextLink } from '@fossil-ds/fossil-ui'
-import { HiHome } from 'react-icons/hi'
+import { HiArrowRight } from 'react-icons/hi'
 
 interface ErrorFallbackProps {
   error: Error
@@ -44,7 +44,7 @@ const ErrorFallback = ({
             }
             history.push('/')
           }}
-          icon={<HiHome />}
+          icon={<HiArrowRight />}
         >
           Go back to Home
         </TextLink>

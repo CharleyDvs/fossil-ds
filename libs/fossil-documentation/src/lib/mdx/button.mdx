@@ -1,7 +1,7 @@
 import { HiHome } from 'react-icons/hi'
 import { Button } from '@fossil-ds/fossil-components'
 import { ComponentPlayground } from '@fossil-ds/fossil-layout'
-import { CodeBlock } from '@fossil-ds/fossil-ui'
+import { CodeBlock, InsetText } from '@fossil-ds/fossil-ui'
 
 <ComponentPlayground
   component={[
@@ -47,6 +47,24 @@ import { CodeBlock } from '@fossil-ds/fossil-ui'
     },
   ]}
 />
+
+## Component Props
+
+| Prop name                                                  | Description                                                                                                                                                                      |
+| :--------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`label`** <small>_string_</small>                        | This is the inner text of the button                                                                                                                                             |
+| **`status`** <small>_string_</small>                       | This can take either value _'error'_ or _'success'_ to give feedback to the user or just left _null_ to retun the Button to it's normal state                                    |
+| **`disabled`** <small>_boolean_</small>                    | If this prop is passed down, it disables the button blocking all pointer events                                                                                                  |
+| **`secondary`** <small>_boolean_</small>                   | This prop modifies the general look of the button to be used as a secondary button                                                                                               |
+| **`loading`** <small>_boolean_</small>                     | This prop blocks the button and gives feedback to the user about the current state of a proccess                                                                                 |
+| **`leftIcon, rightIcon`** <small>_react-component_</small> | These are the components to be rendered at either the left or right side of the inner text, usually an SVG image. The _'success'_ and _'error'_ states overrides the icon passed |
+| **`onClick`** <small>_( ) => { }_</small>                  | This fuction is triggered when the button is clicked                                                                                                                             |
+
+<InsetText textType="info">
+  Besides the <em>disabled</em> prop, the Button is also disabled by default
+  when is loading or when there's an error, this behavior prevents unwanted user
+  interactions
+</InsetText>
 
 ## Code Example
 

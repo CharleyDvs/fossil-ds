@@ -10,11 +10,24 @@ import { Switch } from './switch.tsx'
   argTypes={{
     value: { control: false },
     dataTestId: { table: { disable: true } },
+    ref: { table: { disable: true } },
+    disableFocusRipple: { table: { disable: true } },
+    edge: { table: { disable: true } },
+    action: { table: { disable: true } },
+    centerRipple: { table: { disable: true } },
+    disableTouchRipple: { table: { disable: true } },
+    focusRipple: { table: { disable: true } },
+    focusVisibleClassName: { table: { disable: true } },
+    onFocusVisible: { table: { disable: true } },
+    TouchRippleProps: { table: { disable: true } },
   }}
 />
 
 # Switch
 
 <Canvas>
-  <Story name="Switch">{(args) => <Switch {...args} />}</Story>
+  <Story name="default">{(args) => <Switch {...args} />}</Story>
+  <Story name="disabled" args={{ disabled: true }}>
+    {(args) => <Switch {...args} />}
+  </Story>
 </Canvas>

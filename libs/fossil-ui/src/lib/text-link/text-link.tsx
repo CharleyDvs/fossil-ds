@@ -18,9 +18,14 @@ const useStyles = makeStyles((theme: Theme) => ({
       textDecoration: 'underline',
       opacity: '.7',
     },
+    fontWeight: 'bold',
+    paddingRight: theme.spacing(2),
   },
   icon: {
-    marginRight: theme.spacing(0.5),
+    position: 'absolute',
+    transform: 'translateY(50%)',
+    top: '-50%',
+    right: '-4px',
   },
 }))
 
@@ -44,8 +49,8 @@ export const TextLink = ({
       }}
       {...rest}
     >
-      <span className={styles.icon}>{icon}</span>
       {children}
+      <span className={styles.icon}>{icon}</span>
     </span>
   )
 }
