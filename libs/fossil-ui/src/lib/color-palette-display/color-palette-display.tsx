@@ -15,8 +15,6 @@ export interface ColorPaletteDisplayProps {
 const useStyles = makeStyles({
   container: {
     minWidth: '400px',
-    border: 'solid 1px #7a7a7a',
-    borderRadius: tokens.border.radius[16].value,
   },
 })
 

@@ -1,4 +1,5 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core'
+import { tokens } from '@fossil-ds/shared/styles'
 
 export interface ColorDisplayProps {
   colorCode: string
@@ -13,6 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'space-between',
       alignItems: 'flex-end',
       height: theme.spacing(10),
+      overflow: 'hidden',
       '& > *': {
         opacity: 0,
         transition: 'all ease .3s',
@@ -24,6 +26,12 @@ const useStyles = makeStyles((theme: Theme) =>
         '& > *': {
           opacity: 1,
         },
+      },
+      '&:last-child': {
+        borderRadius: `0 0 ${tokens.border.radius[16].value} ${tokens.border.radius[16].value}`,
+      },
+      '&:first-child': {
+        borderRadius: `${tokens.border.radius[16].value} ${tokens.border.radius[16].value} 0 0`,
       },
     },
     label: {

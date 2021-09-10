@@ -1,7 +1,7 @@
 {
   "main": {
     "background": {
-      "color": { "value": "{grey.40.value}" }
+      "color": { "value": "{grey.6.value}" }
     }
   }
 }

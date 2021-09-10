@@ -1,4 +1,4 @@
-import { HiHome } from 'react-icons/hi'
+import { HiShoppingCart } from 'react-icons/hi'
 import { Button } from '@fossil-ds/fossil-components'
 import { ComponentPlayground } from '@fossil-ds/fossil-layout'
 import { CodeBlock, InsetText } from '@fossil-ds/fossil-ui'
@@ -6,8 +6,8 @@ import { CodeBlock, InsetText } from '@fossil-ds/fossil-ui'
 <ComponentPlayground
   component={[
     <Button />,
-    <Button leftIcon={<HiHome />} />,
-    <Button rightIcon={<HiHome />} />,
+    <Button leftIcon={<HiShoppingCart />} />,
+    <Button rightIcon={<HiShoppingCart />} />,
   ]}
   componentName="Button"
   propList={[
@@ -68,13 +68,15 @@ import { CodeBlock, InsetText } from '@fossil-ds/fossil-ui'
 
 ## Code Example
 
-<CodeBlock component={<Button label="Home" leftIcon={<HiHome />} />}>{`
+<CodeBlock
+  component={<Button label="Add to cart" leftIcon={<HiShoppingCart />} />}
+>{`
 import { Button } from '@fossil-ds/fossil-components'
-import { HiHome } from 'react-icons/hi'
+import { HiShoppingCart } from 'react-icons/hi'
 ${''}
 export const CustomButtonWithIcon = () => {
   const handleClick = () => console.log('click')
 ${''}
-  return <Button onClick={handleClick} label="Home" leftIcon={<HiHome />} />
+  return <Button onClick={handleClick} label="Add to cart" leftIcon={<HiShoppingCart />} />
 }
 `}</CodeBlock>

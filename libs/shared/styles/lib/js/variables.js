@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 09 Sep 2021 17:46:47 GMT
+ * Generated on Fri, 10 Sep 2021 03:37:11 GMT
  */
 
 module.exports = {
@@ -2509,11 +2509,11 @@ module.exports = {
   "main": {
     "background": {
       "color": {
-        "value": "#a7a7a7",
+        "value": "#f2f2f2",
         "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
         "isSource": true,
         "original": {
-          "value": "{grey.40.value}"
+          "value": "{grey.6.value}"
         },
         "name": "MainBackgroundColor",
         "attributes": {
