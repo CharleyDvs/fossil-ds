@@ -1,0 +1,37 @@
+{
+  "util": {
+    "color": {
+      "success": {
+        "40": { "value": "{green.40.value}" },
+        "80": { "value": "{green.80.value}" },
+        "100": { "value": "{green.100.value}" },
+        "120": { "value": "{green.120.value}" },
+        "140": { "value": "{green.140.value}" }
+      },
+      "error": {
+        "20": { "value": "{red.20.value}" },
+        "40": { "value": "{red.40.value}" },
+        "80": { "value": "{red.80.value}" },
+        "100": { "value": "{red.100.value}" },
+        "120": { "value": "{red.120.value}" },
+        "140": { "value": "{red.140.value}" }
+      },
+      "warning": {
+        "20": { "value": "{yellow.20.value}" },
+        "40": { "value": "{yellow.40.value}" },
+        "80": { "value": "{yellow.80.value}" },
+        "100": { "value": "{yellow.100.value}" },
+        "120": { "value": "{yellow.120.value}" },
+        "140": { "value": "{yellow.140.value}" }
+      },
+      "info": {
+        "20": { "value": "{blue.20.value}" },
+        "40": { "value": "{blue.40.value}" },
+        "80": { "value": "{blue.80.value}" },
+        "100": { "value": "{blue.100.value}" },
+        "120": { "value": "{blue.120.value}" },
+        "140": { "value": "{blue.140.value}" }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 08 Sep 2021 17:09:15 GMT
+ * Generated on Thu, 09 Sep 2021 17:46:47 GMT
  */
 
 export default tokens;
@@ -22,6 +22,14 @@ declare interface DesignToken {
 }
 
 declare const tokens: {
+  "border": {
+    "radius": {
+      "8": DesignToken,
+      "16": DesignToken,
+      "24": DesignToken,
+      "circle": DesignToken
+    }
+  },
   "red": {
     "10": DesignToken,
     "20": DesignToken,
@@ -130,33 +138,6 @@ declare const tokens: {
       }
     }
   },
-  "button": {
-    "primary": {
-      "background": {
-        "color": DesignToken,
-        "color-success": DesignToken,
-        "color-error": DesignToken
-      },
-      "border": DesignToken,
-      "border-radius": DesignToken,
-      "border-hover": DesignToken,
-      "border-success": DesignToken,
-      "border-success-hover": DesignToken,
-      "border-error": DesignToken,
-      "color": DesignToken,
-      "height": DesignToken,
-      "padding": DesignToken,
-      "shadow": DesignToken
-    },
-    "secondary": {
-      "background": {
-        "color": DesignToken
-      },
-      "border": DesignToken,
-      "border-hover": DesignToken,
-      "color": DesignToken
-    }
-  },
   "util": {
     "color": {
       "success": {
@@ -190,6 +171,33 @@ declare const tokens: {
         "120": DesignToken,
         "140": DesignToken
       }
+    }
+  },
+  "button": {
+    "primary": {
+      "background": {
+        "color": DesignToken,
+        "color-success": DesignToken,
+        "color-error": DesignToken
+      },
+      "border": DesignToken,
+      "border-radius": DesignToken,
+      "border-hover": DesignToken,
+      "border-success": DesignToken,
+      "border-success-hover": DesignToken,
+      "border-error": DesignToken,
+      "color": DesignToken,
+      "height": DesignToken,
+      "padding": DesignToken,
+      "shadow": DesignToken
+    },
+    "secondary": {
+      "background": {
+        "color": DesignToken
+      },
+      "border": DesignToken,
+      "border-hover": DesignToken,
+      "color": DesignToken
     }
   },
   "main": {

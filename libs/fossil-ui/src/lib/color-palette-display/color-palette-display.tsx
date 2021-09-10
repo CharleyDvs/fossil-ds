@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles'
 import { ColorDisplay } from '../color-display/color-display'
+import { tokens } from '@fossil-ds/shared/styles'
 
 interface ColorData {
   colorCode: string
@@ -15,6 +16,7 @@ const useStyles = makeStyles({
   container: {
     minWidth: '400px',
     border: 'solid 1px #7a7a7a',
+    borderRadius: tokens.border.radius[16].value,
   },
 })
 

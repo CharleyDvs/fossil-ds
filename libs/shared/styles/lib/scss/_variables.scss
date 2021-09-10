@@ -1,7 +1,11 @@
 
 // Do not edit directly
-// Generated on Wed, 08 Sep 2021 17:09:15 GMT
+// Generated on Thu, 09 Sep 2021 17:46:47 GMT
 
+$border-radius-8: 8px;
+$border-radius-16: 16px;
+$border-radius-24: 24px;
+$border-radius-circle: 50%;
 $red-10: #ffd5d6;
 $red-20: #ffabad;
 $red-30: #ff8284;
@@ -92,23 +96,6 @@ $brand-color-secondary-80: #04f462;
 $brand-color-secondary-100: #03B448;
 $brand-color-secondary-120: #02903a;
 $brand-color-secondary-140: #026c2b;
-$button-primary-background-color: #222222;
-$button-primary-background-color-success: #03B448;
-$button-primary-background-color-error: #5c0002;
-$button-primary-border: 2px solid #222222;
-$button-primary-border-radius: 48px;
-$button-primary-border-hover: 2px solid #d3d3d3;
-$button-primary-border-success: 2px solid #03B448;
-$button-primary-border-success-hover: 2px solid #d3d3d3;
-$button-primary-border-error: 2px solid #5c0002;
-$button-primary-color: #d3d3d3;
-$button-primary-height: 48px;
-$button-primary-padding: 16px;
-$button-primary-shadow: 2px 2px 4px #7a7a7a;
-$button-secondary-background-color: #d3d3d3;
-$button-secondary-border: 2px solid #d3d3d3;
-$button-secondary-border-hover: 2px solid #222222;
-$button-secondary-color: #222222;
 $util-color-success-40: #7efdb0;
 $util-color-success-80: #04f462;
 $util-color-success-100: #03B448;
@@ -132,6 +119,23 @@ $util-color-info-80: #0070b3;
 $util-color-info-100: #003c60;
 $util-color-info-120: #00304d;
 $util-color-info-140: #00243a;
+$button-primary-background-color: #222222;
+$button-primary-background-color-success: #03B448;
+$button-primary-background-color-error: #5c0002;
+$button-primary-border: 2px solid #222222;
+$button-primary-border-radius: 48px;
+$button-primary-border-hover: 2px solid #d3d3d3;
+$button-primary-border-success: 2px solid #03B448;
+$button-primary-border-success-hover: 2px solid #d3d3d3;
+$button-primary-border-error: 2px solid #5c0002;
+$button-primary-color: #d3d3d3;
+$button-primary-height: 48px;
+$button-primary-padding: 16px;
+$button-primary-shadow: 2px 2px 4px #7a7a7a;
+$button-secondary-background-color: #d3d3d3;
+$button-secondary-border: 2px solid #d3d3d3;
+$button-secondary-border-hover: 2px solid #222222;
+$button-secondary-color: #222222;
 $main-background-color: #a7a7a7;
 $font-size-8: 0.5;
 $font-size-10: 0.625;

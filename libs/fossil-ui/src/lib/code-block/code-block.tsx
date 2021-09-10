@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     previewContainer: {
       border: `1px solid ${tokens.grey[20].value}`,
-      borderRadius: '16px',
+      borderRadius: tokens.border.radius[16].value,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -35,12 +35,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     icon: {
       cursor: 'pointer',
-      marginLeft: '0 8px',
+      marginLeft: theme.spacing(1),
     },
     clipboardBtn: {
       position: 'absolute',
       bottom: theme.spacing(1),
-      left: theme.spacing(1),
       '&:hover': {
         opacity: '1 !important',
       },

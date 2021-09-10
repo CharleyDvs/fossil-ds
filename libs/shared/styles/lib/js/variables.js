@@ -1,9 +1,89 @@
 /**
  * Do not edit directly
- * Generated on Wed, 08 Sep 2021 17:09:15 GMT
+ * Generated on Thu, 09 Sep 2021 17:46:47 GMT
  */
 
 module.exports = {
+  "border": {
+    "radius": {
+      "8": {
+        "value": "8px",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/border/border.json",
+        "isSource": true,
+        "original": {
+          "value": "8px"
+        },
+        "name": "BorderRadius8",
+        "attributes": {
+          "category": "border",
+          "type": "radius",
+          "item": "8"
+        },
+        "path": [
+          "border",
+          "radius",
+          "8"
+        ]
+      },
+      "16": {
+        "value": "16px",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/border/border.json",
+        "isSource": true,
+        "original": {
+          "value": "16px"
+        },
+        "name": "BorderRadius16",
+        "attributes": {
+          "category": "border",
+          "type": "radius",
+          "item": "16"
+        },
+        "path": [
+          "border",
+          "radius",
+          "16"
+        ]
+      },
+      "24": {
+        "value": "24px",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/border/border.json",
+        "isSource": true,
+        "original": {
+          "value": "24px"
+        },
+        "name": "BorderRadius24",
+        "attributes": {
+          "category": "border",
+          "type": "radius",
+          "item": "24"
+        },
+        "path": [
+          "border",
+          "radius",
+          "24"
+        ]
+      },
+      "circle": {
+        "value": "50%",
+        "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/border/border.json",
+        "isSource": true,
+        "original": {
+          "value": "50%"
+        },
+        "name": "BorderRadiusCircle",
+        "attributes": {
+          "category": "border",
+          "type": "radius",
+          "item": "circle"
+        },
+        "path": [
+          "border",
+          "radius",
+          "circle"
+        ]
+      }
+    }
+  },
   "red": {
     "10": {
       "value": "#ffd5d6",
@@ -1590,6 +1670,501 @@ module.exports = {
       }
     }
   },
+  "util": {
+    "color": {
+      "success": {
+        "40": {
+          "value": "#7efdb0",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{green.40.value}"
+          },
+          "name": "UtilColorSuccess40",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "success",
+            "subitem": "40"
+          },
+          "path": [
+            "util",
+            "color",
+            "success",
+            "40"
+          ]
+        },
+        "80": {
+          "value": "#04f462",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{green.80.value}"
+          },
+          "name": "UtilColorSuccess80",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "success",
+            "subitem": "80"
+          },
+          "path": [
+            "util",
+            "color",
+            "success",
+            "80"
+          ]
+        },
+        "100": {
+          "value": "#03B448",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{green.100.value}"
+          },
+          "name": "UtilColorSuccess100",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "success",
+            "subitem": "100"
+          },
+          "path": [
+            "util",
+            "color",
+            "success",
+            "100"
+          ]
+        },
+        "120": {
+          "value": "#02903a",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{green.120.value}"
+          },
+          "name": "UtilColorSuccess120",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "success",
+            "subitem": "120"
+          },
+          "path": [
+            "util",
+            "color",
+            "success",
+            "120"
+          ]
+        },
+        "140": {
+          "value": "#026c2b",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{green.140.value}"
+          },
+          "name": "UtilColorSuccess140",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "success",
+            "subitem": "140"
+          },
+          "path": [
+            "util",
+            "color",
+            "success",
+            "140"
+          ]
+        }
+      },
+      "error": {
+        "20": {
+          "value": "#ffabad",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{red.20.value}"
+          },
+          "name": "UtilColorError20",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "error",
+            "subitem": "20"
+          },
+          "path": [
+            "util",
+            "color",
+            "error",
+            "20"
+          ]
+        },
+        "40": {
+          "value": "#ff585b",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{red.40.value}"
+          },
+          "name": "UtilColorError40",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "error",
+            "subitem": "40"
+          },
+          "path": [
+            "util",
+            "color",
+            "error",
+            "40"
+          ]
+        },
+        "80": {
+          "value": "#b00004",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{red.80.value}"
+          },
+          "name": "UtilColorError80",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "error",
+            "subitem": "80"
+          },
+          "path": [
+            "util",
+            "color",
+            "error",
+            "80"
+          ]
+        },
+        "100": {
+          "value": "#5c0002",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{red.100.value}"
+          },
+          "name": "UtilColorError100",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "error",
+            "subitem": "100"
+          },
+          "path": [
+            "util",
+            "color",
+            "error",
+            "100"
+          ]
+        },
+        "120": {
+          "value": "#4a0002",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{red.120.value}"
+          },
+          "name": "UtilColorError120",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "error",
+            "subitem": "120"
+          },
+          "path": [
+            "util",
+            "color",
+            "error",
+            "120"
+          ]
+        },
+        "140": {
+          "value": "#370001",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{red.140.value}"
+          },
+          "name": "UtilColorError140",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "error",
+            "subitem": "140"
+          },
+          "path": [
+            "util",
+            "color",
+            "error",
+            "140"
+          ]
+        }
+      },
+      "warning": {
+        "20": {
+          "value": "#fcefd3",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{yellow.20.value}"
+          },
+          "name": "UtilColorWarning20",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "warning",
+            "subitem": "20"
+          },
+          "path": [
+            "util",
+            "color",
+            "warning",
+            "20"
+          ]
+        },
+        "40": {
+          "value": "#f8dfa7",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{yellow.40.value}"
+          },
+          "name": "UtilColorWarning40",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "warning",
+            "subitem": "40"
+          },
+          "path": [
+            "util",
+            "color",
+            "warning",
+            "40"
+          ]
+        },
+        "80": {
+          "value": "#f1be4e",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{yellow.80.value}"
+          },
+          "name": "UtilColorWarning80",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "warning",
+            "subitem": "80"
+          },
+          "path": [
+            "util",
+            "color",
+            "warning",
+            "80"
+          ]
+        },
+        "100": {
+          "value": "#eeae22",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{yellow.100.value}"
+          },
+          "name": "UtilColorWarning100",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "warning",
+            "subitem": "100"
+          },
+          "path": [
+            "util",
+            "color",
+            "warning",
+            "100"
+          ]
+        },
+        "120": {
+          "value": "#ca9010",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{yellow.120.value}"
+          },
+          "name": "UtilColorWarning120",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "warning",
+            "subitem": "120"
+          },
+          "path": [
+            "util",
+            "color",
+            "warning",
+            "120"
+          ]
+        },
+        "140": {
+          "value": "#986c0c",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{yellow.140.value}"
+          },
+          "name": "UtilColorWarning140",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "warning",
+            "subitem": "140"
+          },
+          "path": [
+            "util",
+            "color",
+            "warning",
+            "140"
+          ]
+        }
+      },
+      "info": {
+        "20": {
+          "value": "#ace0ff",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{blue.20.value}"
+          },
+          "name": "UtilColorInfo20",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "info",
+            "subitem": "20"
+          },
+          "path": [
+            "util",
+            "color",
+            "info",
+            "20"
+          ]
+        },
+        "40": {
+          "value": "#59c1ff",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{blue.40.value}"
+          },
+          "name": "UtilColorInfo40",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "info",
+            "subitem": "40"
+          },
+          "path": [
+            "util",
+            "color",
+            "info",
+            "40"
+          ]
+        },
+        "80": {
+          "value": "#0070b3",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{blue.80.value}"
+          },
+          "name": "UtilColorInfo80",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "info",
+            "subitem": "80"
+          },
+          "path": [
+            "util",
+            "color",
+            "info",
+            "80"
+          ]
+        },
+        "100": {
+          "value": "#003c60",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{blue.100.value}"
+          },
+          "name": "UtilColorInfo100",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "info",
+            "subitem": "100"
+          },
+          "path": [
+            "util",
+            "color",
+            "info",
+            "100"
+          ]
+        },
+        "120": {
+          "value": "#00304d",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{blue.120.value}"
+          },
+          "name": "UtilColorInfo120",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "info",
+            "subitem": "120"
+          },
+          "path": [
+            "util",
+            "color",
+            "info",
+            "120"
+          ]
+        },
+        "140": {
+          "value": "#00243a",
+          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/color/util.json",
+          "isSource": true,
+          "original": {
+            "value": "{blue.140.value}"
+          },
+          "name": "UtilColorInfo140",
+          "attributes": {
+            "category": "util",
+            "type": "color",
+            "item": "info",
+            "subitem": "140"
+          },
+          "path": [
+            "util",
+            "color",
+            "info",
+            "140"
+          ]
+        }
+      }
+    }
+  },
   "button": {
     "primary": {
       "background": {
@@ -1928,501 +2503,6 @@ module.exports = {
           "secondary",
           "color"
         ]
-      }
-    }
-  },
-  "util": {
-    "color": {
-      "success": {
-        "40": {
-          "value": "#7efdb0",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{green.40.value}"
-          },
-          "name": "UtilColorSuccess40",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "success",
-            "subitem": "40"
-          },
-          "path": [
-            "util",
-            "color",
-            "success",
-            "40"
-          ]
-        },
-        "80": {
-          "value": "#04f462",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{green.80.value}"
-          },
-          "name": "UtilColorSuccess80",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "success",
-            "subitem": "80"
-          },
-          "path": [
-            "util",
-            "color",
-            "success",
-            "80"
-          ]
-        },
-        "100": {
-          "value": "#03B448",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{green.100.value}"
-          },
-          "name": "UtilColorSuccess100",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "success",
-            "subitem": "100"
-          },
-          "path": [
-            "util",
-            "color",
-            "success",
-            "100"
-          ]
-        },
-        "120": {
-          "value": "#02903a",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{green.120.value}"
-          },
-          "name": "UtilColorSuccess120",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "success",
-            "subitem": "120"
-          },
-          "path": [
-            "util",
-            "color",
-            "success",
-            "120"
-          ]
-        },
-        "140": {
-          "value": "#026c2b",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{green.140.value}"
-          },
-          "name": "UtilColorSuccess140",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "success",
-            "subitem": "140"
-          },
-          "path": [
-            "util",
-            "color",
-            "success",
-            "140"
-          ]
-        }
-      },
-      "error": {
-        "20": {
-          "value": "#ffabad",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{red.20.value}"
-          },
-          "name": "UtilColorError20",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "error",
-            "subitem": "20"
-          },
-          "path": [
-            "util",
-            "color",
-            "error",
-            "20"
-          ]
-        },
-        "40": {
-          "value": "#ff585b",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{red.40.value}"
-          },
-          "name": "UtilColorError40",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "error",
-            "subitem": "40"
-          },
-          "path": [
-            "util",
-            "color",
-            "error",
-            "40"
-          ]
-        },
-        "80": {
-          "value": "#b00004",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{red.80.value}"
-          },
-          "name": "UtilColorError80",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "error",
-            "subitem": "80"
-          },
-          "path": [
-            "util",
-            "color",
-            "error",
-            "80"
-          ]
-        },
-        "100": {
-          "value": "#5c0002",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{red.100.value}"
-          },
-          "name": "UtilColorError100",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "error",
-            "subitem": "100"
-          },
-          "path": [
-            "util",
-            "color",
-            "error",
-            "100"
-          ]
-        },
-        "120": {
-          "value": "#4a0002",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{red.120.value}"
-          },
-          "name": "UtilColorError120",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "error",
-            "subitem": "120"
-          },
-          "path": [
-            "util",
-            "color",
-            "error",
-            "120"
-          ]
-        },
-        "140": {
-          "value": "#370001",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{red.140.value}"
-          },
-          "name": "UtilColorError140",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "error",
-            "subitem": "140"
-          },
-          "path": [
-            "util",
-            "color",
-            "error",
-            "140"
-          ]
-        }
-      },
-      "warning": {
-        "20": {
-          "value": "#fcefd3",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{yellow.20.value}"
-          },
-          "name": "UtilColorWarning20",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "warning",
-            "subitem": "20"
-          },
-          "path": [
-            "util",
-            "color",
-            "warning",
-            "20"
-          ]
-        },
-        "40": {
-          "value": "#f8dfa7",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{yellow.40.value}"
-          },
-          "name": "UtilColorWarning40",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "warning",
-            "subitem": "40"
-          },
-          "path": [
-            "util",
-            "color",
-            "warning",
-            "40"
-          ]
-        },
-        "80": {
-          "value": "#f1be4e",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{yellow.80.value}"
-          },
-          "name": "UtilColorWarning80",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "warning",
-            "subitem": "80"
-          },
-          "path": [
-            "util",
-            "color",
-            "warning",
-            "80"
-          ]
-        },
-        "100": {
-          "value": "#eeae22",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{yellow.100.value}"
-          },
-          "name": "UtilColorWarning100",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "warning",
-            "subitem": "100"
-          },
-          "path": [
-            "util",
-            "color",
-            "warning",
-            "100"
-          ]
-        },
-        "120": {
-          "value": "#ca9010",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{yellow.120.value}"
-          },
-          "name": "UtilColorWarning120",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "warning",
-            "subitem": "120"
-          },
-          "path": [
-            "util",
-            "color",
-            "warning",
-            "120"
-          ]
-        },
-        "140": {
-          "value": "#986c0c",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{yellow.140.value}"
-          },
-          "name": "UtilColorWarning140",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "warning",
-            "subitem": "140"
-          },
-          "path": [
-            "util",
-            "color",
-            "warning",
-            "140"
-          ]
-        }
-      },
-      "info": {
-        "20": {
-          "value": "#ace0ff",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{blue.20.value}"
-          },
-          "name": "UtilColorInfo20",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "info",
-            "subitem": "20"
-          },
-          "path": [
-            "util",
-            "color",
-            "info",
-            "20"
-          ]
-        },
-        "40": {
-          "value": "#59c1ff",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{blue.40.value}"
-          },
-          "name": "UtilColorInfo40",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "info",
-            "subitem": "40"
-          },
-          "path": [
-            "util",
-            "color",
-            "info",
-            "40"
-          ]
-        },
-        "80": {
-          "value": "#0070b3",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{blue.80.value}"
-          },
-          "name": "UtilColorInfo80",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "info",
-            "subitem": "80"
-          },
-          "path": [
-            "util",
-            "color",
-            "info",
-            "80"
-          ]
-        },
-        "100": {
-          "value": "#003c60",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{blue.100.value}"
-          },
-          "name": "UtilColorInfo100",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "info",
-            "subitem": "100"
-          },
-          "path": [
-            "util",
-            "color",
-            "info",
-            "100"
-          ]
-        },
-        "120": {
-          "value": "#00304d",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{blue.120.value}"
-          },
-          "name": "UtilColorInfo120",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "info",
-            "subitem": "120"
-          },
-          "path": [
-            "util",
-            "color",
-            "info",
-            "120"
-          ]
-        },
-        "140": {
-          "value": "#00243a",
-          "filePath": "/Users/cjaime/Courses/fossil-ds/libs/shared/styles/src/tokens/global/global.json",
-          "isSource": true,
-          "original": {
-            "value": "{blue.140.value}"
-          },
-          "name": "UtilColorInfo140",
-          "attributes": {
-            "category": "util",
-            "type": "color",
-            "item": "info",
-            "subitem": "140"
-          },
-          "path": [
-            "util",
-            "color",
-            "info",
-            "140"
-          ]
-        }
       }
     }
   },
