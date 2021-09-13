@@ -5,7 +5,7 @@ import { IconButton, Tooltip } from '@material-ui/core'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import { HiTemplate, HiCode, HiClipboard } from 'react-icons/hi'
 import { tokens } from '@fossil-ds/shared/styles'
-import { ClipboardButton } from '../clipboard-button/clipboard-button'
+import { ClipboardButton } from '@fossil-ds/fossil-ui'
 
 interface CodeBlockProps {
   children: string

@@ -1,3 +1,4 @@
+export * from './lib/code-block/code-block'
 export * from './lib/component-playground/component-playground'
 export * from './lib/theme/theme'
 export * from './lib/theme-switch/theme-switch'
