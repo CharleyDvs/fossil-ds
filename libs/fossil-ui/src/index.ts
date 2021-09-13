@@ -1,3 +1,4 @@
+export * from './lib/clipboard-button/clipboard-button'
 export * from './lib/inset-text/inset-text'
 export * from './lib/color-palette-display/color-palette-display'
 export * from './lib/color-display/color-display'

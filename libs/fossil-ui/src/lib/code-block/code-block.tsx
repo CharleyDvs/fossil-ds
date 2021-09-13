@@ -4,8 +4,8 @@ import cx from 'classnames'
 import { IconButton, Tooltip } from '@material-ui/core'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import { HiTemplate, HiCode, HiClipboard } from 'react-icons/hi'
-import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { tokens } from '@fossil-ds/shared/styles'
+import { ClipboardButton } from '../clipboard-button/clipboard-button'
 
 interface CodeBlockProps {
   children: string
@@ -61,15 +61,7 @@ export const CodeBlock = ({
   component,
 }: CodeBlockProps): JSX.Element => {
   const [showCode, setShowCode] = useState(true)
-  const [clipboardText, setClipboardText] = useState('copy to clipboard')
   const styles = useStyles()
-
-  const handleCopy = () => {
-    setClipboardText('copied to the clipboard!')
-    setTimeout(() => {
-      setClipboardText('copy to clipboard')
-    }, 3000)
-  }
 
   return (
     <div className={styles.container}>
@@ -97,14 +89,12 @@ export const CodeBlock = ({
               </pre>
             )}
           </Highlight>
-          <div className={cx(styles.clipboardBtn, styles.white, styles.icon)}>
-            <CopyToClipboard text={children} onCopy={handleCopy}>
-              <Tooltip title={clipboardText} placement="top" arrow>
-                <IconButton className={cx(styles.clipboardBtn, styles.white)}>
-                  <HiClipboard />
-                </IconButton>
-              </Tooltip>
-            </CopyToClipboard>
+          <div className={styles.icon}>
+            <ClipboardButton text={children}>
+              <IconButton className={cx(styles.clipboardBtn, styles.white)}>
+                <HiClipboard />
+              </IconButton>
+            </ClipboardButton>
           </div>
         </>
       ) : (
